@@ -1,34 +1,30 @@
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
+# .gitignore for Grails 1.2 and 1.3
 
-## Specific to RubyMotion:
-.dat*
-.repl_history
-build/
+# web application files
+/web-app/WEB-INF/classes
 
-## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
+# default HSQL database files for production mode
+/prodDb.*
 
-## Environment normalisation:
-/.bundle/
-/lib/bundler/man/
+# general HSQL database files
+*Db.properties
+*Db.script
 
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
-# .ruby-version
-# .ruby-gemset
+# logs
+/stacktrace.log
+/test/reports
+/logs
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# project release file
+/*.war
+
+# plugin release files
+/*.zip
+/plugin.xml
+
+# older plugin install locations
+/plugins
+/web-app/plugins
+
+# "temporary" build files
+/target
