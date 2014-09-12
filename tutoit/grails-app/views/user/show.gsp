@@ -23,29 +23,40 @@
 			</g:if>
 			<ol class="property-list user">
 			
-				<g:if test="${userInstance?.name}">
+				<g:if test="${userInstance?.userName}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="user.name.label" default="Name" /></span>
+					<span id="userName-label" class="property-label"><g:message code="user.userName.label" default="User Name" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${userInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="userName-label"><g:fieldValue bean="${userInstance}" field="userName"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.email}">
+				<g:if test="${userInstance?.userEmail}">
 				<li class="fieldcontain">
-					<span id="email-label" class="property-label"><g:message code="user.email.label" default="Email" /></span>
+					<span id="userEmail-label" class="property-label"><g:message code="user.userEmail.label" default="User Email" /></span>
 					
-						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${userInstance}" field="email"/></span>
+						<span class="property-value" aria-labelledby="userEmail-label"><g:fieldValue bean="${userInstance}" field="userEmail"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.password}">
+				<g:if test="${userInstance?.userPassword}">
 				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="user.password.label" default="Password" /></span>
+					<span id="userPassword-label" class="property-label"><g:message code="user.userPassword.label" default="User Password" /></span>
 					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${userInstance}" field="password"/></span>
+						<span class="property-value" aria-labelledby="userPassword-label"><g:fieldValue bean="${userInstance}" field="userPassword"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.videos}">
+				<li class="fieldcontain">
+					<span id="videos-label" class="property-label"><g:message code="user.videos.label" default="Videos" /></span>
+					
+						<g:each in="${userInstance.videos}" var="v">
+						<span class="property-value" aria-labelledby="videos-label"><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

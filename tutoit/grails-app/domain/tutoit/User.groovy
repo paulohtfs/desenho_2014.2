@@ -2,14 +2,22 @@ package tutoit
 
 class User {
 
-	String name
-	String email
-	String password
+	String userName
+	String userEmail
+	String userPassword
 
+	static hasMany = [videos:Video]
+	//static hasMany = [commentaries:Commentary]
 
     static constraints = {
-    	name(blank:false, maxSize: 30)
-    	email(email: true)
-    	password(password: true)
+    	userName blank:false, maxSize:30
+    	userEmail email:true
+    	userPassword password:true
+
+    	videos nullable:true
+    }
+
+    String toString(){
+    	userName
     }
 }
