@@ -79,6 +79,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${videoInstance?.playlist}">
+				<li class="fieldcontain">
+					<span id="playlist-label" class="property-label"><g:message code="video.playlist.label" default="Playlist" /></span>
+					
+						<span class="property-value" aria-labelledby="playlist-label"><g:link controller="playlist" action="show" id="${videoInstance?.playlist?.id}">${videoInstance?.playlist?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${videoInstance?.user}">
 				<li class="fieldcontain">
 					<span id="user-label" class="property-label"><g:message code="video.user.label" default="User" /></span>

@@ -34,7 +34,7 @@
 					
 						<th><g:message code="video.category.label" default="Category" /></th>
 					
-						<th><g:message code="video.user.label" default="User" /></th>
+						<th><g:message code="video.playlist.label" default="Playlist" /></th>
 					
 					</tr>
 				</thead>
@@ -52,7 +52,7 @@
 					
 						<td>${fieldValue(bean: videoInstance, field: "category")}</td>
 					
-						<td>${fieldValue(bean: videoInstance, field: "user")}</td>
+						<td>${fieldValue(bean: videoInstance, field: "playlist")}</td>
 					
 					</tr>
 				</g:each>

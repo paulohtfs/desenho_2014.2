@@ -6,8 +6,7 @@ class User {
 	String userEmail
 	String userPassword
 
-	static hasMany = [videos:Video]
-	//static hasMany = [commentaries:Commentary]
+	static hasMany = [videos:Video, playlist:Playlist]
 
     static constraints = {
     	userName blank:false, maxSize:30
@@ -15,6 +14,7 @@ class User {
     	userPassword password:true
 
     	videos nullable:true
+        playlist nullable:true
     }
 
     String toString(){

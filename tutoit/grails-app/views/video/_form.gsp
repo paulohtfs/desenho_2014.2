@@ -51,6 +51,14 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: videoInstance, field: 'playlist', 'error')} required">
+	<label for="playlist">
+		<g:message code="video.playlist.label" default="Playlist" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="playlist" name="playlist.id" from="${tutoit.Playlist.list()}" optionKey="id" required="" value="${videoInstance?.playlist?.id}" class="many-to-one"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: videoInstance, field: 'user', 'error')} required">
 	<label for="user">
 		<g:message code="video.user.label" default="User" />

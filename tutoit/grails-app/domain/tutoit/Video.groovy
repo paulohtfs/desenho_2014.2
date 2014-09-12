@@ -7,7 +7,7 @@ class Video {
 	String videoLink
 	Date publishDate = new Date()
 
-	static belongsTo = [user:User]
+	static belongsTo = [user:User, playlist:Playlist]
 	static hasMany = [commentaries:Commentary]
 	static hasOne = [category:Category]
 

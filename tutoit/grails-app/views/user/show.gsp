@@ -61,6 +61,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${userInstance?.playlist}">
+				<li class="fieldcontain">
+					<span id="playlist-label" class="property-label"><g:message code="user.playlist.label" default="Playlist" /></span>
+					
+						<g:each in="${userInstance.playlist}" var="p">
+						<span class="property-value" aria-labelledby="playlist-label"><g:link controller="playlist" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

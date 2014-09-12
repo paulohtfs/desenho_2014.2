@@ -43,3 +43,20 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'playlist', 'error')} ">
+	<label for="playlist">
+		<g:message code="user.playlist.label" default="Playlist" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${userInstance?.playlist?}" var="p">
+    <li><g:link controller="playlist" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="playlist" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'playlist.label', default: 'Playlist')])}</g:link>
+</li>
+</ul>
+
+</div>
+
