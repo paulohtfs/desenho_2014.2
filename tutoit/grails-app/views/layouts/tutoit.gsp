@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Tuto It</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -125,6 +125,8 @@
                             </li>
                         </ol>
                     </div>
+
+                    <g:layoutBody/>
                 </div>
                 <!-- /.row -->
 
