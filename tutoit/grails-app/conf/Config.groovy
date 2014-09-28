@@ -15,18 +15,18 @@ grails.project.groupId = appName // change this to alter the default package nam
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [
-    all:           '*/*',
-    atom:          'application/atom+xml',
-    css:           'text/css',
-    csv:           'text/csv',
-    form:          'application/x-www-form-urlencoded',
-    html:          ['text/html','application/xhtml+xml'],
-    js:            'text/javascript',
-    json:          ['application/json', 'text/json'],
-    multipartForm: 'multipart/form-data',
-    rss:           'application/rss+xml',
-    text:          'text/plain',
-    xml:           ['text/xml', 'application/xml']
+all:           '*/*',
+atom:          'application/atom+xml',
+css:           'text/css',
+csv:           'text/csv',
+form:          'application/x-www-form-urlencoded',
+html:          ['text/html','application/xhtml+xml'],
+js:            'text/javascript',
+json:          ['application/json', 'text/json'],
+multipartForm: 'multipart/form-data',
+rss:           'application/rss+xml',
+text:          'text/plain',
+xml:           ['text/xml', 'application/xml']
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
@@ -60,14 +60,20 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 
 environments {
-    development {
-        grails.logging.jul.usebridge = true
-    }
-    production {
-        grails.logging.jul.usebridge = false
+  development {
+    grails.logging.jul.usebridge = true
+  }
+  production {
+    grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+      }
     }
-}
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'tutoit.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'tutoit.UserLogin'
+grails.plugins.springsecurity.authority.className = 'tutoit.Login'
+
 
 // log4j configuration
 log4j = {
@@ -88,9 +94,7 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
-}
+         }
 
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'tutoit.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'tutoit.UserLogin'
-grails.plugins.springsecurity.authority.className = 'tutoit.Login'
+
+
