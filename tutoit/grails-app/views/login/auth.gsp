@@ -23,13 +23,13 @@
 				<input type='password' class='password' name='j_password' id='password' placeholder="Senha"/>
 			</p>
 
+			<p>
+				<button type='submit' id="submit">Entrar</button>
+			</p>
+
 			<p id="remember_me_holder">
 				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
 				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
-			</p>
-
-			<p>
-				<button type='submit' id="submit">Entrar</button>
 			</p>
 		</form>
 
@@ -42,11 +42,11 @@
 	    </div>
 	</div>
 
-	<!-- Javascript -->
+	<!-- Javascript 
 	<script src="${request.contextPath}/js/jquery-1.8.2.min.js"></script>
 	<script src="${request.contextPath}/js/supersized.3.2.7.min.js"></script>
 	<script src="${request.contextPath}/js/supersized-init.js"></script>
-	<script src="${request.contextPath}/js/scripts.js"></script>
+	<script src="${request.contextPath}/js/scripts.js"></script>-->
 
 	<script type='text/javascript'>
 		<!--
