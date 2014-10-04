@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+.page-container {
+    margin: 120px auto 0 auto;
+}
+
 a,
 a:hover,
 a:focus,
