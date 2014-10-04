@@ -16,13 +16,15 @@
 
     <!-- Custom CSS -->
     <link href="${request.contextPath}/css/sb-admin.css" rel="stylesheet">
+    <link href="${request.contextPath}/css/perfil.css" rel="stylesheet">
+    
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
-<body>
+<body id="page-top">
 
     <div id="wrapper">
 
@@ -36,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#teste">TUTO IT</a>
+                <a class="navbar-brand" href="/tutoit/">TUTO IT</a>
             </div> -->
 
             <!-- Search-->
@@ -60,17 +62,23 @@
                         <a href="#"><img src="${resource(dir: 'images', file: 'user.png')}"</a>
                     </li>
 
-                    <li>
-                        <a href="#perfil"><i class="fa fa-fw fa-dashboard"></i> Perfil</a>
+                    <li class="hidden">
+                        <a href="#page-top"></a>
                     </li>
+
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Explorar Videos 
-                            <span class="glyphicon glyphicon-search"></span>
+                        <a href="/tutoit/user/perfil"><i class="fa fa-fw fa-dashboard"></i> Perfil</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#alterar"><i class="fa fa-fw fa-bar-chart-o"></i> Alterar Perfil
                         </a>
                     </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Timeline</a>
+                    <li class="page-scroll">
+                        <a href="#excluir"<i class="fa fa-fw fa-table"></i> Excluir Conta</a>
                     </li>
+
+                    <!--
                     <li>
                         <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
                     </li>
@@ -96,12 +104,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+             /.navbar-collapse -->
         </nav>
 
         <!-- Add here the other pages-->
-
-        <section id="teste">
         <div id="page-wrapper">
 
             <div class="container-fluid">
@@ -109,33 +115,93 @@
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Blank Page <small>Subheading</small>
-                        </h1>
+                        <h1 class="page-header">Alterar Perfil</h1>
                         <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            <li> 
+                                <i class="fa fa-dashboard"></i>  <a href="/tutoit/">Home</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> Blank Page
+                                <i class="fa fa-file"></i> Alterar Perfil
                             </li>
                         </ol>
                     </div>
-                </div>
-                <!-- /.row -->
+                </div><!-- /.row -->
 
-            </div>
-            <!-- /#page-wrapper -->
-        </div>
-        <!-- /#wrapper -->
-        </section>
+                <section id="perfil">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1>Perfil</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-lg-offset-2">
+                                <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </section>
+
+                <section id="alterar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1>Alterar</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-lg-offset-2">
+                                <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="excluir">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1>Excluir</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-lg-offset-2">
+                                <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                            </div>
+                        </div>
+                    </div>
+      
+                </section>
+            </div> <!-- /#page-wrapper -->
+        </div><!-- /#wrapper -->
+        
+
 
         <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+        <script src="${request.contextPath}/js/jquery-1.11.0.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="${request.contextPath}/js/bootstrap.min.js"></script>
+            <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-</body>
+        <!-- Custom Theme JavaScript -->
+        <script src="${request.contextPath}/js/perfil.js"></script>
+
+
+
+    </body>
 
 </html>

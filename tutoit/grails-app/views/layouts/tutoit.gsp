@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.gsp">TUTO IT</a> 
+                <a class="navbar-brand" href="/tutoit/">TUTO IT</a> 
             </div> -->
 
             <!-- Search-->
