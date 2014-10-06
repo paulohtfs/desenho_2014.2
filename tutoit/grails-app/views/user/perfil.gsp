@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/tutoit/">TUTO IT</a>
-            </div> -->
+            </div>
 
             <!-- Search-->
             <form class="navbar-form navbar-right" action="#" role="search">
@@ -151,7 +151,7 @@
                     
                 </section>
 
-                <section id="alterar">
+                <section id="Alterar">
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h1>Alterar</h1>
@@ -168,16 +168,30 @@
                                 <h1>Excluir</h1>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-lg-offset-2">
-                                <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p><p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                            </div>
+
+                        <!-- Reason button -->
+                        <div class="btn-group form-group">
+                          <button type="button" class="btn btn-default btn-lg input-lg">Motivo</button>
+                          <button type="button" class="btn btn-default btn-lg dropdown-toggle input-lg" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
                         </div>
+
+                        <g:form method="post">
+                            <div class="btn btn-default save form-group">
+                                <g:hiddenField name="id" value="${userInstance?.id}" />
+                                <g:actionSubmit class="delete" action="delete" value="Excluir conta" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Você tem certeza?')}');" />
+                            </div>
+                        </g:form>
                     </div>
-      
                 </section>
             </div> <!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
