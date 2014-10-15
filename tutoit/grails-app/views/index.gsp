@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="tutoit"/>
+		<meta name="layout" content="main"/>
 		<style type="text/css" media="screen">
 			#page-body {
 				margin: 2em 1em 1.25em 18em;

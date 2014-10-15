@@ -111,41 +111,44 @@
         <!-- Add here the other pages-->
 
         <section id="teste">
-        <div id="page-wrapper">
+            <div id="page-wrapper">
 
-            <div class="container-fluid">
+                <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Blank Page <small>Subheading</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Blank Page
-                            </li>
-                        </ol>
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Blank Page <small>Subheading</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                </li>
+                                <li class="active">
+                                    <i class="fa fa-file"></i> Blank Page
+                                </li>
+                            </ol>
+                        </div>
+
+                        <g:layoutBody/>
                     </div>
-
-                    <g:layoutBody/>
+                    <!-- /.row -->
                 </div>
-                <!-- /.row -->
+                <!-- /.container-fluid-->   
 
-            </div>
+             </div>
             <!-- /#page-wrapper -->
-        </div>
-        <!-- /#wrapper -->
         </section>
+    </div>
+    <!-- /#wrapper -->
+ 
 
-        <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="${request.contextPath}/js/jquery-1.11.0.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="${request.contextPath}/js/bootstrap.min.js"></script>
 
 </body>
 
