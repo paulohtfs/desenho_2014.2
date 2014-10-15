@@ -74,11 +74,11 @@
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#alterar"><i class="fa fa-fw fa-bar-chart-o"></i> Alterar Perfil
+                        <a href="#Alterar"><i class="fa fa-fw fa-bar-chart-o"></i> Alterar Perfil
                         </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#excluir"<i class="fa fa-fw fa-table"></i> Excluir Conta</a>
+                        <a href="#Excluir"<i class="fa fa-fw fa-table"></i> Excluir Conta</a>
                     </li>
 
                     <!--
@@ -161,7 +161,7 @@
                     <g:render template="edit"/>    
                 </section>
 
-                <section id="excluir">
+                <section id="Excluir">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 text-center">

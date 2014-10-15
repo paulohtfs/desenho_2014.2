@@ -1,5 +1,4 @@
 		<div id="edit-user" class="content scaffold-edit" role="main">
-			<h1>Geral</h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -15,6 +14,7 @@
 				<g:hiddenField name="id" value="${userInstance?.id}" />
 				<g:hiddenField name="version" value="${userInstance?.version}" />
 				<div class="form col-md-10 center-block">
+					<h3>Geral</h3>
 				
 					<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required form-group">
 						<g:textField name="username"  value="${userInstance?.username}" placeholder="Nome" class="form-control input-lg"/>
@@ -24,7 +24,7 @@
 						<g:textField name="lastname" placeholder="Sobrenome" class="form-control input-lg"/>
 					</div>					
 
-					<h1>Social</h1>
+					<h3>Social</h3>
 
 					<div class="form-group">
 						<g:textField name="facebook" placeholder="Facebook " class="form-control input-lg"/>
