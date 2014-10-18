@@ -1,3 +1,5 @@
+import grails.plugins.springsecurity.SecurityConfigType
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -73,7 +75,6 @@ environments {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'tutoit.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'tutoit.UserLogin'
 grails.plugins.springsecurity.authority.className = 'tutoit.Login'
-
 
 // log4j configuration
 log4j = {
