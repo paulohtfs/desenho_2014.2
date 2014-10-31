@@ -34,3 +34,6 @@ web-app/plugins
 .idea/
 tutoit/grails-app/grails-app.iml
 tutoit/test/test.iml
+
+# sonar
+.sonar
