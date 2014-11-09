@@ -3,12 +3,13 @@
 <html lang="en">
 
     <head>
+
+        <title>Tuto It</title>
+
         <!-- Core meta-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Tuto It</title>
 
         <!-- Core CSS -->
         <link rel="stylesheet" href="<g:resource dir='css' file='bootstrap.min.css'/>">
@@ -25,6 +26,7 @@
 
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -33,112 +35,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin</a>
+                    <a class="navbar-brand" href="/tutoit">Tuto It</a>
                 </div>
-                <!-- Top Menu Items -->
-                <ul class="nav navbar-right top-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu message-dropdown">
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading">
-                                                <strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading">
-                                                <strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading">
-                                                <strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-footer">
-                                <a href="#">Read All New Messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu alert-dropdown">
-                            <li>
-                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">View All</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
 
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -147,76 +45,82 @@
                         <img class="avatar" src="${resource(dir: 'images', file: 'profile.png')}"/>
 
                         <li>
-                            <a href=""><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                            <a href=""><i class="fa fa-fw fa-search"></i> Explorar</a>
                         </li>
 
                         <li>
-                            <a href="${createLink(controller: 'user', action: 'profile')}">
-                                <i class="fa fa-fw fa-user"></i> Perfil
+                            <a href="javascript:;" data-toggle="collapse" data-target="#profile">
+                                <i class="fa fa-fw fa-user"></i> Perfil <i class="fa fa-fw fa-caret-down"></i>
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                        </li>
-
-                        <li>
-                            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                        </li>
-
-                        <li>
-                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                        </li>
-
-                        <li>
-                            <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
+                            <ul id="profile" class="collapse">
                                 <li>
-                                    <a href="#">Dropdown Item</a>
+                                    <a href="${createLink(controller: 'user', action: 'profile')}"> Visualizar</a>
                                 </li>
+
+                                <li class="page-scroll">
+                                    <a href=""> Alterar Perfil</a>
+                                </li>
+
                                 <li>
-                                    <a href="#">Dropdown Item</a>
+                                    <a href=""> Configurações</a>
+                                </li>
+
+                                <li>
+                                    <a href=""> Excluir Conta</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="active">
-                            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-play-circle"></i> Meus Vídeos</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#categories">
+                                <i class="fa fa-fw fa-stack-exchange"></i> Categorias <i class="fa fa-fw fa-caret-down"></i>
+                            </a>
+                            <ul id="categories" class="collapse">
+
+                                <li>
+                                    <a href=""> Todas</a>
+                                </li>
+
+                                <li>
+                                    <a href=""> Tecnologia</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#market">
+                                <i class="fa fa-fw fa-gift"></i> Mercado <i class="fa fa-fw fa-caret-down"></i>
+                            </a>
+                            <ul id="market" class="collapse">
+                                <li>
+                                    <a href=""> Meus Itens</a>
+                                </li>
+
+                                <li>
+                                    <a href=""> Loja</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
                         </li>
 
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
+
             </nav>
 
             <div id="page-wrapper">
 
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1 class="page-header">
-                                Blank Page
-                                <small>Subheading</small>
-                            </h1>
-                            <ol class="breadcrumb">
-                                <li>
-                                    <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                                </li>
-                                <li class="active">
-                                    <i class="fa fa-file"></i> Blank Page
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
                     <g:layoutBody/>
-                    <!-- /.row -->
-
                 </div>
                 <!-- /.container-fluid -->
             </div>
