@@ -10,8 +10,8 @@ class UserController {
         redirect(action: "list", params: params)
     }
 
-    def perfil() {
-    
+    def profile() {
+        render(view: 'profile')
     }
 
     def list(Integer max) {

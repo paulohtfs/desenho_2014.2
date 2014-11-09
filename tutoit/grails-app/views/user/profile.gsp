@@ -7,8 +7,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Tuto It</title>
 
@@ -80,34 +78,8 @@
                     <li class="page-scroll">
                         <a href="#Excluir"<i class="fa fa-fw fa-table"></i> Excluir Conta</a>
                     </li>
-
-                    <!--
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="active">
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
                 </ul>
             </div>
-             /.navbar-collapse -->
         </nav>
 
         <!-- Add here the other pages-->
@@ -209,8 +181,7 @@
         <!-- Custom Theme JavaScript -->
         <script src="${request.contextPath}/js/perfil.js"></script>
 
-
-
+    </div>
     </body>
 
 </html>
