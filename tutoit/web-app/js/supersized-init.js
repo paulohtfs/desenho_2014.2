@@ -21,8 +21,8 @@ jQuery(function($){
         slide_links        : 'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
         slides             : [    // Slideshow Images
                                  {image : '../images/backgrounds/1.jpg'},
-                                 {image : '/web-app/images/backgrounds/2.jpg'},
-                                 {image : 'tutoit/web-app/images/backgrounds/3.jpg'}
+                                 {image : '../images/backgrounds/2.jpg'},
+                                 {image : '../images/backgrounds/3.jpg'}
                              ]
 
     });
