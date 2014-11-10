@@ -25,8 +25,9 @@
     </head>
 
     <body>
-
+    <div class="page-container">
     <g:layoutBody/>
+    </div>
 
     <script type='text/javascript'>
         <!--
