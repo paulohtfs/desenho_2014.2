@@ -4,11 +4,11 @@
 	<h1>Tuto it</h1>
 
 	<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
-		<g:textField name="username" required="" value="${userInstance?.username}" placeholder="Nome"/>
+		<g:textField name="username" class="username" value="${userInstance?.username}" placeholder="Nome"/>
 	</div>
 
 	<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-		<g:textField name="password" required="" value="${userInstance?.password}" placeholder="Senha"/>
+		<g:textField name="password" class="password" value="${userInstance?.password}" placeholder="Senha"/>
 	</div>
 
 	<button class="btn btn-theme btn-lg btn-block save" name="create" value="${message(default: 'Create')}">Cadastrar</button>
@@ -16,7 +16,7 @@
 	<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
 		<label for="enabled">
 			<g:message code="user.enabled.label" default="Enabled" />
-			
+
 		</label>
 		<g:checkBox name="enabled" value="${userInstance?.enabled}" value="${true}"/>
 	</div>
@@ -27,7 +27,7 @@
 		<label for="videos">
 			<g:message code="user.videos.label" default="Videos" />
 		</label>
-		
+
 		<ul class="one-to-many">
 			<g:each in="${userInstance?.videos?}" var="v">
 			    <li><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></li>
@@ -44,7 +44,7 @@
 		<label for="playlist">
 			<g:message code="user.playlist.label" default="Playlist" />
 		</label>
-		
+
 		<ul class="one-to-many">
 			<g:each in="${userInstance?.playlist?}" var="p">
 			    <li><g:link controller="playlist" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
@@ -59,14 +59,14 @@
 
 	<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'accountExpired', 'error')} ">
 		<label for="accountExpired">
-			<g:message code="user.accountExpired.label" default="Account Expired" />	
+			<g:message code="user.accountExpired.label" default="Account Expired" />
 		</label>
 		<g:checkBox name="accountExpired" value="${userInstance?.accountExpired}" />
 	</div>
 
 	<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'accountLocked', 'error')} ">
 		<label for="accountLocked">
-			<g:message code="user.accountLocked.label" default="Account Locked" />	
+			<g:message code="user.accountLocked.label" default="Account Locked" />
 		</label>
 		<g:checkBox name="accountLocked" value="${userInstance?.accountLocked}" />
 	</div>
@@ -77,7 +77,7 @@
 		</label>
 		<g:checkBox name="passwordExpired" value="${userInstance?.passwordExpired}" />
 	</div>
-	
+
 	End hidding-->
 
 </div>
