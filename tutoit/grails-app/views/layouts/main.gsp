@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
+        <title><g:layoutTitle default="Tuto It"/></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Bootstrap Core CSS -->
-        <link href="${request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
-
-	    <!-- Custom CSS -->
-	    <link href="${request.contextPath}/css/sb-admin.css" rel="stylesheet">
-
-	    <!-- Custom Fonts -->
-	    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="<g:resource dir='css' file='sb-admin.css'/>">
+        <link rel="stylesheet" href="<g:resource dir='css' file='bootstrap.min.css'/>">
+        <link rel="stylesheet" type="text/css" href="<g:resource dir='css' file='font-awesome.min.css'/>">
 
 		<g:layoutHead/>
-		<r:layoutResources />
+		<r:layoutResources/>
 	</head>
 
 	<body>
@@ -59,7 +55,7 @@
 
 	                    <li>
 	                        <a href="/tutoit/user/perfil"><i class="fa fa-fw fa-dashboard"></i> Perfil</a>
-	                        <!-- ${createLink(uri: '/grails-app/views/user/perfil.gsp')} não deu certo -->
+	                        <!-- ${createLink(uri: '/grails-app/views/user/profile.gsp')} não deu certo -->
 	                    </li>
 
 	                    <li>
@@ -125,8 +121,7 @@
 	                                </li>
 	                            </ol>
 	                        </div>
-
-	                        <g:layoutBody/>
+                            <g:layoutBody/>
 	                    </div>
 	                    <!-- /.row -->
 	                </div>
@@ -136,19 +131,8 @@
 	        </section>
 	    </div>
 	    <!-- /#wrapper -->
- 
 
-
-
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
-		<r:layoutResources /> 
-
-		<!-- jQuery Version 1.11.0 -->
-	    <script src="${request.contextPath}/js/jquery-1.11.0.js"></script>
-
-	    <!-- Bootstrap Core JavaScript -->
-	    <script src="${request.contextPath}/js/bootstrap.min.js"></script>
+		<r:layoutResources />
 	</body>
 </html>

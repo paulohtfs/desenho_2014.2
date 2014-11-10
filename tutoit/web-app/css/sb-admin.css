@@ -222,3 +222,10 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+/* Avatar image style */
+.avatar img{
+    padding: 20px;
+    height: 220px;
+    width: 220px;
+}

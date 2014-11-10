@@ -30,7 +30,9 @@ web-app/plugins
 # "temporary" build files
 /tutoit/target/*
 
-# intelliJ build project
+# IntelliJ build project
 .idea/
-tutoit/grails-app/grails-app.iml
-tutoit/test/test.iml
+*.iml
+
+# sonar
+.sonar
