@@ -224,8 +224,12 @@ ul.alert-dropdown {
 }
 
 /* Avatar image style */
-.avatar img{
-    padding: 20px;
-    height: 220px;
-    width: 220px;
+.avatar {
 }
+
+.avatar img {
+    margin: 20px;
+    height: 160px;
+    width: 160px;
+}
+

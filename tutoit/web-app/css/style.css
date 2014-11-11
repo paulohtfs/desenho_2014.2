@@ -131,6 +131,17 @@ button:active {
     border: 0px solid #ef4300;
 }
 
+.sign-in {
+    padding-top: 20px;
+}
+
+.sign-in a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 110%;
+}
+
 .error {
     display: none;
     position: absolute;
@@ -182,7 +193,4 @@ button:active {
 .connect a.twitter { background: url(../images/twitter.png) center center no-repeat; }
 
 .connect a:hover { background-position: center bottom; }
-
-
-
 
