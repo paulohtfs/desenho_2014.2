@@ -7,16 +7,15 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#show-category" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="list"><g:message code="Lista de Categorias" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="Nova Categoria" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-category" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1><g:message code="Categoria" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -24,7 +23,7 @@
 			
 				<g:if test="${categoryInstance?.categoryName}">
 				<li class="fieldcontain">
-					<span id="categoryName-label" class="property-label"><g:message code="category.categoryName.label" default="Category Name" /></span>
+					<span id="categoryName-label" class="property-label"><g:message code="category.categoryName.label" default="Nome : " /></span>
 					
 						<span class="property-value" aria-labelledby="categoryName-label"><g:fieldValue bean="${categoryInstance}" field="categoryName"/></span>
 					
@@ -33,11 +32,40 @@
 			
 				<g:if test="${categoryInstance?.videos}">
 				<li class="fieldcontain">
-					<span id="videos-label" class="property-label"><g:message code="category.videos.label" default="Videos" /></span>
+					<span id="videos-label" class="property-label"><g:message code="category.videos.label" default="Videos : " /></span>
 					
 						<g:each in="${categoryInstance.videos}" var="v">
 						<span class="property-value" aria-labelledby="videos-label"><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${categoryInstance?.subCategories}">
+				<li class="fieldcontain">
+					<span id="subCategories-label" class="property-label"><g:message code="category.subCategories.label" default="SubCategorias : " /></span>
+					
+						<g:each in="${categoryInstance.subCategories}" var="s">
+						<span class="property-value" aria-labelledby="subCategories-label"><g:link controller="category" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${categoryInstance?.categoryDescription}">
+				<li class="fieldcontain">
+					<span id="categoryDescription-label" class="property-label"><g:message code="category.categoryDescription.label" default="Descrição : " /></span>
+					
+						<span class="property-value" aria-labelledby="categoryDescription-label"><g:fieldValue bean="${categoryInstance}" field="categoryDescription"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${categoryInstance?.eSubcategoria}">
+				<li class="fieldcontain">
+					<span id="eSubcategoria-label" class="property-label"><g:message code="category.eSubcategoria.label" default="subcategoria" /></span>
+					
+						<span class="property-value" aria-labelledby="eSubcategoria-label"><g:formatBoolean boolean="${categoryInstance?.eSubcategoria}" /></span>
 					
 				</li>
 				</g:if>

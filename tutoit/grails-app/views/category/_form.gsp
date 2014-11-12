@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'categoryName', 'error')} required">
 	<label for="categoryName">
-		<g:message code="category.categoryName.label" default="Category Name" />
+		<g:message code="category.categoryName.label" default="Nome da Categoria" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="categoryName" required="" value="${categoryInstance?.categoryName}"/>
@@ -25,5 +25,29 @@
 </li>
 </ul>
 
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'subCategories', 'error')} ">
+	<label for="subCategories">
+		<g:message code="category.subCategories.label" default="SubCategories" />
+		
+	</label>
+	<g:select name="subCategories" from="${tutoit.Category.list()}" multiple="multiple" optionKey="id" size="5" value="${categoryInstance?.subCategories*.id}" class="many-to-many"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'categoryDescription', 'error')} ">
+	<label for="categoryDescription">
+		<g:message code="category.categoryDescription.label" default="Descrição das Categorias" />
+		
+	</label>
+	<g:textField name="categoryDescription" value="${categoryInstance?.categoryDescription}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'eSubcategoria', 'error')} ">
+	<label for="eSubcategoria">
+		<g:message code="category.eSubcategoria.label" default=" subcategoria" />
+		
+	</label>
+	<g:checkBox name="eSubcategoria" value="${categoryInstance?.eSubcategoria}" />
 </div>
 

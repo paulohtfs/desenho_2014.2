@@ -9,7 +9,7 @@
     </div>
 
     <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-        <g:textField name="password" class="password" value="${userInstance?.password}" placeholder="Senha"/>
+        <g:passwordField name="password" class="password" value="${userInstance?.password}" placeholder="Senha"/>
     </div>
 
     <button class="btn btn-theme btn-lg btn-block save" name="create"
