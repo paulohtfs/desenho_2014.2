@@ -18,7 +18,9 @@
         <button type='submit' id="submit">Entrar</button>
     </form>
 
-    <a href="${createLink(controller: 'user', action: 'create')}">Cadastre-se</a>
+    <div class="sign-in">
+        <a href="${createLink(controller: 'user', action: 'create')}">Cadastre-se</a>
+    </div>
 
     <div class="connect">
         <p>Ou conecte-se com:</p>

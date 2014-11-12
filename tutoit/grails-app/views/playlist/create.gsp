@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'playlist.label', default: 'Playlist')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>

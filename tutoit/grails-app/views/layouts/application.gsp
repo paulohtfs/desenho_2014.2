@@ -42,7 +42,9 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
 
-                        <img class="avatar" src="${resource(dir: 'images', file: 'profile.png')}"/>
+                        <div class="avatar">
+                            <img src="${resource(dir: 'images', file: 'profile.png')}"/>
+                        </div>
 
                         <li>
                             <a href=""><i class="fa fa-fw fa-search"></i> Explorar</a>

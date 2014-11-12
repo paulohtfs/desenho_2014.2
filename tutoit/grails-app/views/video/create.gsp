@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'video.label', default: 'Video')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
