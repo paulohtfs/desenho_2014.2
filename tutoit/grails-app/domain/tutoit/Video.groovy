@@ -17,6 +17,9 @@ class Video {
     	videoName blank:false
     	videoLink blank:false, url:true
     	publishDate editable: false, display: true, format: 'dd/MM/yyyy'
+        commentaries display : false
+        playlist nullable: true
+
     }
 
     String toString() {

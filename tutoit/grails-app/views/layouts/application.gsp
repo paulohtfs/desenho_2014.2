@@ -74,7 +74,7 @@
                         </li>
 
                         <li>
-                            <a href=""><i class="fa fa-fw fa-play-circle"></i> Meus Vídeos</a>
+                            <a href="/tutoit/video/list"><i class="fa fa-fw fa-play-circle"></i> Meus Vídeos</a>
                         </li>
 
                         <li>
@@ -84,7 +84,7 @@
                             <ul id="categories" class="collapse">
 
                                 <li>
-                                    <a href=""> Todas</a>
+                                    <a href="/tutoit/category/list"> Todas</a>
                                 </li>
 
                                 <li>

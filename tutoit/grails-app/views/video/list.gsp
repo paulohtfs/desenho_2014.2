@@ -7,7 +7,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-video" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -23,17 +22,17 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="tutoits" title="${message(code: 'video.tutoits.label', default: 'Tutoits')}" />
+						<g:sortableColumn property="tutoits" title="${message(code: 'video.tutoits.label', default: 'Tutoi ts')}" />
 					
-						<g:sortableColumn property="videoName" title="${message(code: 'video.videoName.label', default: 'Video Name')}" />
+						<g:sortableColumn property="videoName" title="${message(code: 'video.videoName.label', default: 'Nome do video ')}" />
 					
-						<g:sortableColumn property="videoLink" title="${message(code: 'video.videoLink.label', default: 'Video Link')}" />
+						<g:sortableColumn property="videoLink" title="${message(code: 'video.videoLink.label', default: 'Link ')}" />
 					
-						<g:sortableColumn property="publishDate" title="${message(code: 'video.publishDate.label', default: 'Publish Date')}" />
+						<g:sortableColumn property="publishDate" title="${message(code: 'video.publishDate.label', default: 'Data de publicação')}" />
 					
-						<th><g:message code="video.category.label" default="Category" /></th>
+						<th><g:message code="video.playlist.label" default="Playlist " /></th>
 					
-						<th><g:message code="video.playlist.label" default="Playlist" /></th>
+						<th><g:message code="video.category.label" default="Categoria " /></th>
 					
 					</tr>
 				</thead>
@@ -49,9 +48,9 @@
 					
 						<td><g:formatDate date="${videoInstance.publishDate}" /></td>
 					
-						<td>${fieldValue(bean: videoInstance, field: "category")}</td>
-					
 						<td>${fieldValue(bean: videoInstance, field: "playlist")}</td>
+					
+						<td>${fieldValue(bean: videoInstance, field: "category")}</td>
 					
 					</tr>
 				</g:each>
