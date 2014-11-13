@@ -50,6 +50,8 @@
                             <a href=""><i class="fa fa-fw fa-search"></i> Explorar</a>
                         </li>
 
+                        <!-- Profile -->
+
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#profile">
                                 <i class="fa fa-fw fa-user"></i> Perfil <i class="fa fa-fw fa-caret-down"></i>
@@ -73,9 +75,30 @@
                             </ul>
                         </li>
 
+                        <!-- Meus Videos -->
+
                         <li>
-                            <a href="/tutoit/video/list"><i class="fa fa-fw fa-play-circle"></i> Meus Vídeos</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#meusvideos">
+                                <i class="fa fa-fw fa-play-circle"></i> Meus Vídeos <i class="fa fa-fw fa-caret-down"></i>
+                            </a>
+                            <ul id="meusvideos" class="collapse">
+                                <li>
+                                    <a href="${createLink(controller: 'video', action: 'list')}"> Visualizar</a>
+                                </li>
+
+                                <li class="page-scroll">
+                                    <a href="${createLink(controller: 'video', action: 'create')}"> Adicionar</a>
+                                </li>
+
+                                <li>
+                                    <a href="${createLink(controller: 'playlist', action: 'list')}"> PlayList</a>
+                                </li>
+                            </ul>
                         </li>
+
+
+
+
 
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#categories">
