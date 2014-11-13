@@ -13,7 +13,7 @@ class UserController {
     }
 
     def profile() {
-        render(view: 'profile')
+
     }
 
     /* To be deleted */

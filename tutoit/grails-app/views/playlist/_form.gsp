@@ -4,15 +4,32 @@
 
 <div class="fieldcontain ${hasErrors(bean: playlistInstance, field: 'playlistName', 'error')} required">
 	<label for="playlistName">
-		<g:message code="playlist.playlistName.label" default="Nome: " />
+		<g:message code="playlist.playlistName.label" default=" Nome" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="playlistName" required="" value="${playlistInstance?.playlistName}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: playlistInstance, field: 'videos', 'error')} ">
+	<label for="videos">
+		<g:message code="playlist.videos.label" default="Videos" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${playlistInstance?.videos?}" var="v">
+    <li><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="video" action="create" params="['playlist.id': playlistInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'video.label', default: 'Video')])}</g:link>
+</li>
+</ul>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: playlistInstance, field: 'playlistDate', 'error')} required">
 	<label for="playlistDate">
-		<g:message code="playlist.playlistDate.label" default="Data: " />
+		<g:message code="playlist.playlistDate.label" default="Data" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="playlistDate" precision="day"  value="${playlistInstance?.playlistDate}"  />

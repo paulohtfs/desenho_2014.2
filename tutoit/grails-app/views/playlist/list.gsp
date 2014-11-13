@@ -9,12 +9,11 @@
 	<body>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="Nova Playlist" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="Nova Playlist"  /></g:link></li>
 			</ul>
 		</div>
 		<div id="list-playlist" class="content scaffold-list" role="main">
-			<h1><g:message code="Listar Playlist" /></h1>
+			<h1><g:message code="Playlist"/></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -26,7 +25,7 @@
 					
 						<g:sortableColumn property="playlistDate" title="${message(code: 'playlist.playlistDate.label', default: 'Data')}" />
 					
-						<th><g:message code="playlist.user.label" default="Usuário" /></th>
+						<th><g:message code="playlist.user.label" default="Usuário " /></th>
 					
 					</tr>
 				</thead>
