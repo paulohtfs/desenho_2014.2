@@ -7,16 +7,15 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#show-commentary" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="list"><g:message code="Listar Comentários"  /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="Novo Comentário" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-commentary" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1><g:message code="Ver Comentário" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -24,7 +23,7 @@
 			
 				<g:if test="${commentaryInstance?.commentaryDescription}">
 				<li class="fieldcontain">
-					<span id="commentaryDescription-label" class="property-label"><g:message code="commentary.commentaryDescription.label" default="Commentary Description" /></span>
+					<span id="commentaryDescription-label" class="property-label"><g:message code="commentary.commentaryDescription.label" default="Descrição : " /></span>
 					
 						<span class="property-value" aria-labelledby="commentaryDescription-label"><g:fieldValue bean="${commentaryInstance}" field="commentaryDescription"/></span>
 					
@@ -33,7 +32,7 @@
 			
 				<g:if test="${commentaryInstance?.commentaryDate}">
 				<li class="fieldcontain">
-					<span id="commentaryDate-label" class="property-label"><g:message code="commentary.commentaryDate.label" default="Commentary Date" /></span>
+					<span id="commentaryDate-label" class="property-label"><g:message code="commentary.commentaryDate.label" default="Data : " /></span>
 					
 						<span class="property-value" aria-labelledby="commentaryDate-label"><g:formatDate date="${commentaryInstance?.commentaryDate}" /></span>
 					
@@ -42,7 +41,7 @@
 			
 				<g:if test="${commentaryInstance?.video}">
 				<li class="fieldcontain">
-					<span id="video-label" class="property-label"><g:message code="commentary.video.label" default="Video" /></span>
+					<span id="video-label" class="property-label"><g:message code="commentary.video.label" default="Video: " /></span>
 					
 						<span class="property-value" aria-labelledby="video-label"><g:link controller="video" action="show" id="${commentaryInstance?.video?.id}">${commentaryInstance?.video?.encodeAsHTML()}</g:link></span>
 					

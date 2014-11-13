@@ -7,7 +7,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -15,7 +14,7 @@
 			</ul>
 		</div>
 		<div id="list-user" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="Usuários" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -23,17 +22,17 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="username" title="${message(code: 'user.username.label', default: 'Username')}" />
+						<g:sortableColumn property="username" title="${message(code: 'user.username.label', default: 'Nome')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />
+						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Senha')}" />
 					
-						<g:sortableColumn property="accountExpired" title="${message(code: 'user.accountExpired.label', default: 'Account Expired')}" />
+						<g:sortableColumn property="accountExpired" title="${message(code: 'user.accountExpired.label', default: 'Conta expirada')}" />
 					
-						<g:sortableColumn property="accountLocked" title="${message(code: 'user.accountLocked.label', default: 'Account Locked')}" />
+						<g:sortableColumn property="accountLocked" title="${message(code: 'user.accountLocked.label', default: 'Conta Bloqueada')}" />
 					
-						<g:sortableColumn property="enabled" title="${message(code: 'user.enabled.label', default: 'Enabled')}" />
+						<g:sortableColumn property="enabled" title="${message(code: 'user.enabled.label', default: 'Habilitado')}" />
 					
-						<g:sortableColumn property="passwordExpired" title="${message(code: 'user.passwordExpired.label', default: 'Password Expired')}" />
+						<g:sortableColumn property="passwordExpired" title="${message(code: 'user.passwordExpired.label', default: 'Senha Expirada')}" />
 					
 					</tr>
 				</thead>

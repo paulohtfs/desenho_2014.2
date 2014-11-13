@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: commentaryInstance, field: 'commentaryDescription', 'error')} required">
 	<label for="commentaryDescription">
-		<g:message code="commentary.commentaryDescription.label" default="Commentary Description" />
+		<g:message code="commentary.commentaryDescription.label" default="Descrição :" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textArea name="commentaryDescription" cols="40" rows="5" maxlength="255" required="" value="${commentaryInstance?.commentaryDescription}"/>
@@ -12,7 +12,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: commentaryInstance, field: 'commentaryDate', 'error')} required">
 	<label for="commentaryDate">
-		<g:message code="commentary.commentaryDate.label" default="Commentary Date" />
+		<g:message code="commentary.commentaryDate.label" default="Data : " />
 		<span class="required-indicator">*</span>
 	</label>
 	${commentaryInstance?.commentaryDate?.toString()}

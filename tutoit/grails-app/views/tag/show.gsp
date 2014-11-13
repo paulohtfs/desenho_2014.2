@@ -7,12 +7,11 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#show-tag" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="list"><g:message code="Listar Tags"  /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="Nova Tag"  /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-tag" class="content scaffold-show" role="main">
@@ -24,7 +23,7 @@
 			
 				<g:if test="${tagInstance?.tagName}">
 				<li class="fieldcontain">
-					<span id="tagName-label" class="property-label"><g:message code="tag.tagName.label" default="Tag Name" /></span>
+					<span id="tagName-label" class="property-label"><g:message code="tag.tagName.label" default="Nome: " /></span>
 					
 						<span class="property-value" aria-labelledby="tagName-label"><g:fieldValue bean="${tagInstance}" field="tagName"/></span>
 					
