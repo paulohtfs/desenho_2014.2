@@ -40,7 +40,7 @@
 
                 <!-- Search navigation field -->
                 <div class="nav navbar-right top-nav" >
-                    <i class="fa fa-fw fa-search"></i> Pesquisar no Site
+                    <i class="fa fa-fw fa-search"></i> Pesquisar Vídeo
                     <input class="form-control" placeholder="Pesquisar">
                 </div>
 
@@ -62,7 +62,7 @@
                             </a>
                             <ul id="profile" class="collapse">
                                 <li>
-                                    <a href="${createLink(controller: 'user', action: 'profile')}"> Visualizar</a>
+                                    <a href="${createLink(controller: 'user', action: 'show')}"> Visualizar</a>
                                 </li>
 
                                 <li class="page-scroll">

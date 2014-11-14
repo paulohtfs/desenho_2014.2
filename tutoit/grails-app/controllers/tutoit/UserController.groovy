@@ -12,10 +12,6 @@ class UserController {
         redirect(action: "show", params: params)
     }
 
-    def profile() {
-        render(view: 'profile')
-    }
-
     /* To be deleted */
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -37,7 +33,6 @@ class UserController {
         redirect(uri: '/login/auth')
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show() {
         User currentUser = springSecurityService.currentUser
         if (!currentUser) {
