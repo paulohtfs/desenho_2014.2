@@ -15,18 +15,18 @@ grails.project.groupId = appName // change this to alter the default package nam
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [
-all:           '*/*',
-atom:          'application/atom+xml',
-css:           'text/css',
-csv:           'text/csv',
-form:          'application/x-www-form-urlencoded',
-html:          ['text/html','application/xhtml+xml'],
-js:            'text/javascript',
-json:          ['application/json', 'text/json'],
-multipartForm: 'multipart/form-data',
-rss:           'application/rss+xml',
-text:          'text/plain',
-xml:           ['text/xml', 'application/xml']
+        all:           '*/*',
+        atom:          'application/atom+xml',
+        css:           'text/css',
+        csv:           'text/csv',
+        form:          'application/x-www-form-urlencoded',
+        html:          ['text/html','application/xhtml+xml'],
+        js:            'text/javascript',
+        json:          ['application/json', 'text/json'],
+        multipartForm: 'multipart/form-data',
+        rss:           'application/rss+xml',
+        text:          'text/plain',
+        xml:           ['text/xml', 'application/xml']
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
@@ -60,14 +60,14 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 
 environments {
-  development {
-    grails.logging.jul.usebridge = true
-  }
-  production {
-    grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
-      }
+    development {
+        grails.logging.jul.usebridge = true
     }
+    production {
+        grails.logging.jul.usebridge = false
+        // TODO: grails.serverURL = "http://www.changeme.com"
+    }
+}
 
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'tutoit.User'
@@ -77,23 +77,23 @@ grails.plugins.springsecurity.authority.className = 'tutoit.Login'
 grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
 
 grails.plugins.springsecurity.interceptUrlMap = [
-'/secure/**':    ['ROLE_ADMIN'],
-'/category/**':  ['IS_AUTHENTICATED_FULLY'],
-'/commentary/**':['IS_AUTHENTICATED_FULLY'],
-'/playlist/**':  ['IS_AUTHENTICATED_FULLY'],
-'/tag/**':       ['IS_AUTHENTICATED_FULLY'],
-'/video/**':     ['IS_AUTHENTICATED_FULLY'],
-'/user/list':    ['IS_AUTHENTICATED_FULLY'],
-'/user/show':    ['IS_AUTHENTICATED_FULLY'],
-'/user/perfil':  ['IS_AUTHENTICATED_FULLY'],
-'/user/edit':    ['IS_AUTHENTICATED_FULLY'],
-'/user/create':  ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
-'/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
+    '/secure/**':    ['ROLE_ADMIN'],
+    '/category/**':  ['IS_AUTHENTICATED_FULLY'],
+    '/commentary/**':['IS_AUTHENTICATED_FULLY'],
+    '/playlist/**':  ['IS_AUTHENTICATED_FULLY'],
+    '/tag/**':       ['IS_AUTHENTICATED_FULLY'],
+    '/video/**':     ['IS_AUTHENTICATED_FULLY'],
+    '/user/list':    ['IS_AUTHENTICATED_FULLY'],
+    '/user/show':    ['IS_AUTHENTICATED_FULLY'],
+    '/user/perfil':  ['IS_AUTHENTICATED_FULLY'],
+    '/user/edit':    ['IS_AUTHENTICATED_FULLY'],
+    '/user/create':  ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
 // log4j configuration
@@ -105,17 +105,17 @@ log4j = {
     //}
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
-           'org.codehaus.groovy.grails.web.pages',          // GSP
-           'org.codehaus.groovy.grails.web.sitemesh',       // layouts
-           'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-           'org.codehaus.groovy.grails.web.mapping',        // URL mapping
-           'org.codehaus.groovy.grails.commons',            // core / classloading
-           'org.codehaus.groovy.grails.plugins',            // plugins
-           'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
-           'org.springframework',
-           'org.hibernate',
-           'net.sf.ehcache.hibernate'
-         }
+            'org.codehaus.groovy.grails.web.pages',          // GSP
+            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
+            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+            'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+            'org.codehaus.groovy.grails.commons',            // core / classloading
+            'org.codehaus.groovy.grails.plugins',            // plugins
+            'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
+            'org.springframework',
+            'org.hibernate',
+            'net.sf.ehcache.hibernate'
+}
 
 
 

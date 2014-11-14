@@ -11,11 +11,7 @@ class UserController {
     def index() {
         redirect(action: "show", params: params)
     }
-
-    def profile() {
-
-    }
-
+    
     /* To be deleted */
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -37,7 +33,6 @@ class UserController {
         redirect(uri: '/login/auth')
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show() {
         User currentUser = springSecurityService.currentUser
         if (!currentUser) {
@@ -48,7 +43,6 @@ class UserController {
         [currentUser: currentUser]
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Long id) {
         def userInstance = User.get(id)
         if (!userInstance) {
@@ -60,7 +54,6 @@ class UserController {
         [userInstance: userInstance]
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Long id, Long version) {
         def userInstance = User.get(id)
         if (!userInstance) {
@@ -90,7 +83,6 @@ class UserController {
         redirect(action: "show", id: userInstance.id)
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Long id) {
         def userInstance = User.get(id)
         if (!userInstance) {

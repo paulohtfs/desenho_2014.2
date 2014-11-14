@@ -35,7 +35,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/tutoit">Tuto It</a>
+                    <a class="navbar-brand" href="/tutoit">Tuto It</a>>
+                </div>
+
+                <!-- Search navigation field -->
+                <div class="nav navbar-right top-nav" >
+                    <i class="fa fa-fw fa-search"></i> Pesquisar Vídeo
+                    <input class="form-control" placeholder="Pesquisar">
                 </div>
 
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -58,7 +64,7 @@
                             </a>
                             <ul id="profile" class="collapse">
                                 <li>
-                                    <a href="${createLink(controller: 'user', action: 'profile')}"> Visualizar</a>
+                                    <a href="${createLink(controller: 'user', action: 'show')}"> Visualizar</a>
                                 </li>
 
                                 <li class="page-scroll">
@@ -131,11 +137,6 @@
                                 </li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href=""><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                        </li>
-
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
