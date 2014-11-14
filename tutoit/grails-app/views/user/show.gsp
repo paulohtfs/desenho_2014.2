@@ -3,110 +3,56 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
+
 	<body>
-		<a href="#show-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="show-user" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<ol class="property-list user">
-			
-				<g:if test="${userInstance?.username}">
-				<li class="fieldcontain">
-					<span id="username-label" class="property-label"><g:message code="user.username.label" default="Username" /></span>
-					
-						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${userInstance}" field="username"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.password}">
-				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="user.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${userInstance}" field="password"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.videos}">
-				<li class="fieldcontain">
-					<span id="videos-label" class="property-label"><g:message code="user.videos.label" default="Videos" /></span>
-					
-						<g:each in="${userInstance.videos}" var="v">
-						<span class="property-value" aria-labelledby="videos-label"><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.playlist}">
-				<li class="fieldcontain">
-					<span id="playlist-label" class="property-label"><g:message code="user.playlist.label" default="Playlist" /></span>
-					
-						<g:each in="${userInstance.playlist}" var="p">
-						<span class="property-value" aria-labelledby="playlist-label"><g:link controller="playlist" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.accountExpired}">
-				<li class="fieldcontain">
-					<span id="accountExpired-label" class="property-label"><g:message code="user.accountExpired.label" default="Account Expired" /></span>
-					
-						<span class="property-value" aria-labelledby="accountExpired-label"><g:formatBoolean boolean="${userInstance?.accountExpired}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.accountLocked}">
-				<li class="fieldcontain">
-					<span id="accountLocked-label" class="property-label"><g:message code="user.accountLocked.label" default="Account Locked" /></span>
-					
-						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${userInstance?.accountLocked}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.enabled}">
-				<li class="fieldcontain">
-					<span id="enabled-label" class="property-label"><g:message code="user.enabled.label" default="Enabled" /></span>
-					
-						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${userInstance?.enabled}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${userInstance?.passwordExpired}">
-				<li class="fieldcontain">
-					<span id="passwordExpired-label" class="property-label"><g:message code="user.passwordExpired.label" default="Password Expired" /></span>
-					
-						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${userInstance?.passwordExpired}" /></span>
-					
-				</li>
-				</g:if>
-			
-			</ol>
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${userInstance?.id}" />
-					<g:link class="edit" action="edit" id="${userInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
-		</div>
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Perfil
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-user"></i>  <a href="show.gsp"> Perfil</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-eye"></i> Visualizar
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- .row -->
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> *User*</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h4> Principal</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-group">
+                                <li class="list-group-item"> Nome: </li>
+                                <li class="list-group-item"> Sobrenome: </li>
+                                <li class="list-group-item"> Sexo: </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-sm-4 -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+
+        </div>
+    </div>
 	</body>
 </html>

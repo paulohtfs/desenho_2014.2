@@ -48,7 +48,6 @@ class UserController {
         [currentUser: currentUser]
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Long id) {
         def userInstance = User.get(id)
         if (!userInstance) {
@@ -60,7 +59,6 @@ class UserController {
         [userInstance: userInstance]
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Long id, Long version) {
         def userInstance = User.get(id)
         if (!userInstance) {
@@ -90,7 +88,6 @@ class UserController {
         redirect(action: "show", id: userInstance.id)
     }
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Long id) {
         def userInstance = User.get(id)
         if (!userInstance) {
