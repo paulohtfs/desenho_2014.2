@@ -4,8 +4,18 @@ class User {
 
 	transient springSecurityService
 
+    // User Login Attributes
 	String username
 	String password
+
+    // User Domain Attributes
+    String userLastName
+    String userEmail
+    String userAge
+    String userCountry
+    String userState
+
+    // Spring Security Usage
 	boolean enabled
 	boolean accountExpired
 	boolean accountLocked
@@ -16,6 +26,12 @@ class User {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+
+        userLastName nullable: true
+        userEmail nullable: true
+        userAge nullable: true
+        userCountry nullable: true
+        userState nullable: true
 
 		videos nullable:true
         playlist nullable:true

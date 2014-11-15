@@ -7,11 +7,6 @@
 
     <h1>Login</h1>
 
-    <g:if test='${flash.message}'>
-        <div class='login_message'>${flash.message}</div>
-    </g:if>
-
-
     <form action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
         <input type='text' class='username' name='j_username' id='username' placeholder="Nome de Usuário"/>
         <input type='password' class='password' name='j_password' id='password' placeholder="Senha"/>

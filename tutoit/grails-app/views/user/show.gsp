@@ -55,12 +55,32 @@
 
                             <li class="list-group-item">
                                 <b>Sobrenome: </b>
-                                Tada
+                                <g:if test="${!currentUser.userLastName}">
+                                    Não Informado
+                                </g:if>
+                                <g:else>
+                                    <g:fieldValue field="userLastName" bean="${currentUser}"/>
+                                </g:else>
+                            </li>
+
+                            <li class="list-group-item">
+                                <b>Email: </b>
+                                <g:if test="${!currentUser.userEmail}">
+                                    Não Informado
+                                </g:if>
+                                <g:else>
+                                    <g:fieldValue field="userEmail" bean="${currentUser}"/>
+                                </g:else>
                             </li>
 
                             <li class="list-group-item">
                                 <b>Idade: </b>
-                                22
+                                <g:if test="${!currentUser.userAge}">
+                                    Não Informado
+                                </g:if>
+                                <g:else>
+                                    <g:fieldValue field="userAge" bean="${currentUser}"/>
+                                </g:else>
                             </li>
                         </ul>
                     </div>
@@ -72,14 +92,24 @@
                             <div class="form-group">
                                 <li class="list-group-item">
                                     <b>País: </b>
-                                    Brasil
+                                    <g:if test="${!currentUser.userCountry}">
+                                        Não Informado
+                                    </g:if>
+                                    <g:else>
+                                        <g:fieldValue field="userCountry" bean="${currentUser}"/>
+                                    </g:else>
                                 </li>
                             </div>
 
                             <div class="form-group">
                                 <li class="list-group-item">
                                     <b>Estado: </b>
-                                    Brasília
+                                    <g:if test="${!currentUser.userState}">
+                                        Não Informado
+                                    </g:if>
+                                    <g:else>
+                                        <g:fieldValue field="userState" bean="${currentUser}"/>
+                                    </g:else>
                                 </li>
                             </div>
                         </ul>
