@@ -36,85 +36,18 @@
                     <h3 class="panel-title"> Geral</h3>
                 </div>
 
-                <div class="panel-body">
-
-                    <!-- Main user data -->
-                    <div class="col-sm-6">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <b>Usuário </b>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="${currentUser.username}">
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <b>Sobrenome </b>
-                                <div class="form-group">
-                                    <g:if test="${!currentUser.userLastName}">
-                                        <input class="form-control" placeholder="Sobrenome">
-                                    </g:if>
-                                    <g:else>
-                                        <input class="form-control" placeholder="${currentUser.userLastName}">
-                                    </g:else>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <b>Email </b>
-                                <div class="form-group">
-                                    <g:if test="${!currentUser.userEmail}">
-                                        <input class="form-control" placeholder="Email">
-                                    </g:if>
-                                    <g:else>
-                                        <input class="form-control" placeholder="${currentUser.userEmail}">
-                                    </g:else>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <b>Idade </b>
-                                <div class="form-group">
-                                    <g:if test="${!currentUser.userAge}">
-                                        <input class="form-control" placeholder="">
-                                    </g:if>
-                                    <g:else>
-                                        <input class="form-control" placeholder="${currentUser.userAge}">
-                                    </g:else>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.col-sm-6 -->
-
-                    <!-- Location data -->
-                    <div class="col-sm-6">
-                        <ul class="list-group">
-                            <div class="form-group">
-                                <li class="list-group-item">
-                                    <b>País </b>
-                                    <select class="form-control">
-                                        <option>Brasil</option>
-                                    </select>
-                                </li>
-                            </div>
-
-                            <div class="form-group">
-                                <li class="list-group-item">
-                                    <b>Estado </b>
-                                    <select class="form-control">
-                                        <option>Brasília</option>
-                                    </select>
-                                </li>
-                            </div>
-                        </ul>
-                    </div>
-                    <!-- /.col-sm-6 -->
-
-                </div>
+                <g:form method="post" >
+                    <g:hiddenField name="id" value="${currentUser?.id}" />
+                    <g:hiddenField name="version" value="${currentUser?.version}" />
+                    <fieldset>
+                        <g:render template="editform"/>
+                    </fieldset>
+                    <fieldset>
+                        <g:actionSubmit class="btn btn-lg btn-primary col-lg-12" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                    </fieldset>
+                </g:form>
             </div>
             <!-- /.col-sm-4 -->
-
         </div>
     </div>
     <!-- .user data -->
