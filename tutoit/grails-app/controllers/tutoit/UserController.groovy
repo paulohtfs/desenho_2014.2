@@ -34,7 +34,7 @@ class UserController {
     }
 
     def show() {
-        User currentUser = springSecurityService.currentUser
+        def currentUser = springSecurityService.currentUser
         if (!currentUser) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
             return
@@ -43,15 +43,14 @@ class UserController {
         [currentUser: currentUser]
     }
 
-    def edit(Long id) {
-        def userInstance = User.get(id)
-        if (!userInstance) {
+    def edit() {
+        def currentUser = springSecurityService.currentUser
+        if (!currentUser) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
-            redirect(action: "list")
             return
         }
 
-        [userInstance: userInstance]
+        [currentUser: currentUser]
     }
 
     def update(Long id, Long version) {

@@ -15,11 +15,6 @@
     <button class="btn btn-theme btn-lg btn-block save" name="create"
             value="${message(default: 'Create')}">Cadastrar</button>
 
-    <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
-        <label for="enabled">
-            <g:message code="user.enabled.label" default="Enabled"/>
-        </label>
-        <g:checkBox name="enabled" value="${userInstance?.enabled}" value="${true}"/>
-    </div>
+    <g:hiddenField name="enabled" value="${userInstance?.enabled = true}"/>
 
 </div>

@@ -55,7 +55,6 @@
 
 	                    <li>
 	                        <a href="/tutoit/user/perfil"><i class="fa fa-fw fa-dashboard"></i> Perfil</a>
-	                        <!-- ${createLink(uri: '/grails-app/views/user/profile.gsp')} não deu certo -->
 	                    </li>
 
 	                    <li>

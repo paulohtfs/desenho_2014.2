@@ -6,48 +6,118 @@
 	</head>
 	<body>
 
-		<div id="edit-user" class="content scaffold-edit" role="main">
-			<h1>Geral</h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<g:hasErrors bean="${userInstance}">
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">
+                <g:fieldValue field="username" bean="${currentUser}"/>
+            </h3>
 
-			<ul class="errors" role="alert">
-				<g:eachError bean="${userInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-			<g:form method="post">
-				<g:hiddenField name="id" value="${userInstance?.id}" />
-				<g:hiddenField name="version" value="${userInstance?.version}" />
-				
-					<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
-						<g:textField name="username"  value="${userInstance?.username}" placeholder="Nome"/>
-					</div>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-user"></i>
+                    <a href="${createLink(controller: 'user', action: 'show')}">
+                        Perfil
+                    </a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-edit"></i> Editar
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- .row -->
 
-					<div class="required">
-						<g:textField name="lastname" placeholder="Sobrenome"/>
-					</div>					
+    <!-- User data -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Geral</h3>
+                </div>
 
-					<h1>Social</h1>
+                <div class="panel-body">
 
-					<div class="required">
-						<g:textField name="facebook" placeholder="Facebook"/>
-					</div>
+                    <!-- Main user data -->
+                    <div class="col-sm-6">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <b>Usuário </b>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="${currentUser.username}">
+                                </div>
+                            </li>
 
-					<div class="required">
-						<g:textField name="google" placeholder="Google +"/>
-					</div>
+                            <li class="list-group-item">
+                                <b>Sobrenome </b>
+                                <div class="form-group">
+                                    <g:if test="${!currentUser.userLastName}">
+                                        <input class="form-control" placeholder="Sobrenome">
+                                    </g:if>
+                                    <g:else>
+                                        <input class="form-control" placeholder="${currentUser.userLastName}">
+                                    </g:else>
+                                </div>
+                            </li>
 
-				    <div class="required">
-						<g:textField name="youtube" placeholder="Youtube"/>
-					</div>
+                            <li class="list-group-item">
+                                <b>Email </b>
+                                <div class="form-group">
+                                    <g:if test="${!currentUser.userEmail}">
+                                        <input class="form-control" placeholder="Email">
+                                    </g:if>
+                                    <g:else>
+                                        <input class="form-control" placeholder="${currentUser.userEmail}">
+                                    </g:else>
+                                </div>
+                            </li>
 
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-		
-			</g:form>
-		</div>
+                            <li class="list-group-item">
+                                <b>Idade </b>
+                                <div class="form-group">
+                                    <g:if test="${!currentUser.userAge}">
+                                        <input class="form-control" placeholder="">
+                                    </g:if>
+                                    <g:else>
+                                        <input class="form-control" placeholder="${currentUser.userAge}">
+                                    </g:else>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-sm-6 -->
+
+                    <!-- Location data -->
+                    <div class="col-sm-6">
+                        <ul class="list-group">
+                            <div class="form-group">
+                                <li class="list-group-item">
+                                    <b>País </b>
+                                    <select class="form-control">
+                                        <option>Brasil</option>
+                                    </select>
+                                </li>
+                            </div>
+
+                            <div class="form-group">
+                                <li class="list-group-item">
+                                    <b>Estado </b>
+                                    <select class="form-control">
+                                        <option>Brasília</option>
+                                    </select>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- /.col-sm-6 -->
+
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+
+        </div>
+    </div>
+    <!-- .user data -->
+
 	</body>
 </html>

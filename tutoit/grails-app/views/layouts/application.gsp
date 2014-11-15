@@ -68,11 +68,7 @@
                                 </li>
 
                                 <li class="page-scroll">
-                                    <a href=""> Alterar Perfil</a>
-                                </li>
-
-                                <li>
-                                    <a href=""> Configurações</a>
+                                    <a href="${createLink(controller: 'user', action: 'edit')}"> Alterar Perfil</a>
                                 </li>
 
                                 <li>
