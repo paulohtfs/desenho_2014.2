@@ -82,6 +82,11 @@ class UserController {
         redirect(action: "show", id: userInstance.id)
     }
 
+    def deleteAccount() {
+        def currentUser = springSecurityService.currentUser
+        [currentUser: currentUser]
+    }
+
     def delete(Long id) {
         def userInstance = User.get(id)
         if (!userInstance) {

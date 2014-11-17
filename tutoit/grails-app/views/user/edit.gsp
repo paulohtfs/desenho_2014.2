@@ -43,7 +43,9 @@
                         <g:render template="editform"/>
                     </fieldset>
                     <fieldset>
-                        <g:actionSubmit class="btn btn-lg btn-primary col-lg-12" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                        <g:actionSubmit class="btn btn-lg btn-primary col-lg-12"
+                                        action="update"
+                                        value="Alterar" />
                     </fieldset>
                 </g:form>
             </div>

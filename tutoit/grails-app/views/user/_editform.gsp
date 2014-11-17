@@ -72,6 +72,16 @@
                     </g:else>
                 </div>
             </li>
+
+            <li class="list-group-item">
+                <div class="form-group">
+                    <b>Sexo</b>
+                    <select class="form-control">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+            </li>
         </ul>
     </div>
     <!-- /.col-sm-6 -->

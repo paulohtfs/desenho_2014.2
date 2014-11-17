@@ -27,7 +27,7 @@
         </g:hasErrors>
 
         <g:form action="save">
-            <g:render template="form"/>
+            <g:render template="signinform"/>
         </g:form>
     </div>
 

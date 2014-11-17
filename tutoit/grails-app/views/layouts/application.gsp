@@ -72,7 +72,7 @@
                                 </li>
 
                                 <li>
-                                    <a href=""> Excluir Conta</a>
+                                    <a href="${createLink(controller: 'user', action: 'deleteAccount')}"> Excluir Conta</a>
                                 </li>
                             </ul>
                         </li>
