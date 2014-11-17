@@ -53,7 +53,7 @@
                         </div>
 
                         <li>
-                            <a href=""><i class="fa fa-fw fa-search"></i> Explorar</a>
+                            <a href="/tutoit/searchable"><i class="fa fa-fw fa-search"></i>Explorar Vídeo </a>
                         </li>
 
                         <!-- Profile -->
