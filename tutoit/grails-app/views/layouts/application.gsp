@@ -38,12 +38,6 @@
                     <a class="navbar-brand" href="/tutoit">Tuto It</a>>
                 </div>
 
-                <!-- Search navigation field -->
-                <div class="nav navbar-right top-nav" >
-                    <i class="fa fa-fw fa-search"></i> Pesquisar Vídeo
-                    <input class="form-control" placeholder="Pesquisar">
-                </div>
-
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
