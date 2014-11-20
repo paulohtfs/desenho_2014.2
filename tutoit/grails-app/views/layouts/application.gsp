@@ -37,6 +37,19 @@
                     </button>
                     <a class="navbar-brand" href="/tutoit">Tuto It</a>>
                 </div>
+                                 <div class="nav navbar-right top-nav" >
+                -                 <li>
+                                     <a href="${createLink(controller: 'login', action: 'full')}"> Login <li>
+                                     </li></a>
+                                 </li>
+                -                </div>
+
+            <div class="nav navbar-right top-nav" >
+                -                 <li>
+                <a href="${createLink(controller: 'user', action: 'create')}"> Cadastrar <li>
+                </li></a>
+            </li>
+                -                </div>
 
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
