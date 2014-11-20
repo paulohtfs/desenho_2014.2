@@ -7,9 +7,6 @@
 	</head>
 	<body>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:link class="list" action="list"><g:message code="Listar Playlist" /></g:link></li>
-			</ul>
 		</div>
 		<div id="create-playlist" class="content scaffold-create" role="main">
 			<h1><g:message code="Criar Playlist" /></h1>

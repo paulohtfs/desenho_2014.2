@@ -8,9 +8,6 @@
 	</head>
 	<body>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:link class="create" action="create"><g:message code="Nova Playlist"  /></g:link></li>
-			</ul>
 		</div>
 		<div id="list-playlist" class="content scaffold-list" role="main">
 			<h1><g:message code="Playlist"/></h1>
