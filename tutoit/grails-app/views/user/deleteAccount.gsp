@@ -31,20 +31,10 @@
 </div>
 
 <br>
-
-<!-- Page Header -->
-<div class="row">
-    <div class="page-header"></div>
-    <div class="col-lg-8">
-        <h3> Deixe o motivo</h3>
-        <textarea class="form-control" rows="3"></textarea>
-        <br>
-        <g:actionSubmit class="btn btn-lg btn-danger"
-                        action="delete"
-                        value="Excluir"
-                        onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
-    </div>
+<div id="deleteform">
+    <g:form action="delete">
+        <g:render template="deleteform"/>
+    </g:form>
 </div>
-<!-- .row -->
 </body>
 </html>
