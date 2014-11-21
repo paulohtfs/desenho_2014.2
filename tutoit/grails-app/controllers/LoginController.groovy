@@ -44,7 +44,7 @@ class LoginController {
 		def config = SpringSecurityUtils.securityConfig
 
 		if (springSecurityService.isLoggedIn()) {
-			redirect uri: "main"
+			redirect uri: "/main"
 			return
 		}
 
