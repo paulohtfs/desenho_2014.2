@@ -18,7 +18,6 @@ class UserController {
         [userInstanceList: User.list(params), userInstanceTotal: User.count()]
     }
 
-
     def create() {
         [userInstance: new User(params)]
     }

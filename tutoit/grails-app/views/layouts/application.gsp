@@ -100,8 +100,9 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#playlist">
                                     <i class="fa fa-fw fa-play-circle"></i> Playlist <i class="fa fa-fw fa-caret-down"></i>
                                 </a>
+                            </li>
 
-                           <ul id="playlist" class="collapse">
+                            <ul id="playlist" class="collapse">
                             <li class="page-scroll">
 
                                 <a href="${createLink(controller: 'playlist', action: 'list')}"> PlayLists</a>

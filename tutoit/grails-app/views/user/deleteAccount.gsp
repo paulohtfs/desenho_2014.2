@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: paulo
-  Date: 11/16/14
-  Time: 7:02 PM
---%>
-
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="tutoit.User" %>
 <html>
 <head>
 </head>

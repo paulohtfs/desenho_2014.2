@@ -1,7 +1,5 @@
 <%@ page import="tutoit.Video" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: videoInstance, field: 'videoName', 'error')} required">
 	<label for="videoName">
 		<g:message code="video.videoName.label" default="Name do video: " />

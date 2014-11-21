@@ -5,16 +5,16 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class VideoController {
 
+    def springSecurityService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index() {
-        redirect(action: "list", params: params)
+        redirect(action: "show", params: params)
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [videoInstanceList: Video.list(params), videoInstanceTotal: Video.count()]
+    def list() {
+        def currentUser = springSecurityService.currentUser
+        [currentUser: currentUser]
     }
 
     def create() {

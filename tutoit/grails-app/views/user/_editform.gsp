@@ -1,3 +1,4 @@
+<%@ page import="tutoit.User" %>
 <div class="panel-body">
     <!-- Main user data -->
     <div class="col-sm-6">

@@ -1,3 +1,5 @@
+<%@ page import="tutoit.User" %>
+
 <!-- Delete Form -->
 <div class="row">
     <div class="page-header"></div>
