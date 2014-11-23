@@ -1,9 +1,7 @@
 package tutoit
 
-
-
-import org.junit.*
 import grails.test.mixin.*
+import tutoit.video.VideoController
 
 @TestFor(VideoController)
 @Mock(Video)

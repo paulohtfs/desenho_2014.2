@@ -1,9 +1,11 @@
-package tutoit
+package tutoit.video
 
-import grails.plugins.springsecurity.Secured
 import org.springframework.dao.DataIntegrityViolationException
+import tutoit.Video
 
 class VideoController {
+
+    ShowingVideo showingVideo
 
     def springSecurityService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -12,6 +14,7 @@ class VideoController {
         redirect(action: "show", params: params)
     }
 
+    // Using Show Strategy [Pending]
     def list() {
         def currentUser = springSecurityService.currentUser
         [currentUser: currentUser]
@@ -32,13 +35,17 @@ class VideoController {
         redirect(action: "show", id: videoInstance.id)
     }
 
-    def show(Long id) {
-        def videoInstance = Video.get(id)
+    // Using Show Strategy
+    def show(Long videoId, int showStrategy) {
+
+        def videoInstance = Video.get(videoId)
         if (!videoInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), videoId])
             redirect(action: "list")
             return
         }
+
+        showingVideo.showVideo(videoId, showStrategy)
 
         [videoInstance: videoInstance]
     }

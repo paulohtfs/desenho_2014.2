@@ -64,6 +64,8 @@ grails.project.dependency.resolution = {
 
         compile ":searchable:0.6.9"
 
+        compile ":twitter-bootstrap:3.3.1"
+
         compile ":spring-security-core:1.2.7.3"  // <-- Added
     }
 }

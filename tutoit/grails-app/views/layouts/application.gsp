@@ -36,7 +36,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="${createLink(uri: '/')}">Tuto It</a>
+                <!-- <a class="navbar-brand" href="${createLink(uri: '/')}">Tuto It</a> -->
+                <a class="navbar-brand" href="/tutoit/main">Tuto It</a>
             </div>
 
             <ul class="nav navbar-right top-nav">
@@ -87,8 +88,7 @@
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#meusvideos">
                             <i class="fa fa-fw fa-play-circle"></i> Meus Vídeos <i class="fa fa-fw fa-caret-down"></i>
-                        </a>
-                        <ul id="meusvideos" class="collapse">
+                        </a>               <ul id="meusvideos" class="collapse">
                             <li>
                                 <a href="${createLink(controller: 'video', action: 'show')}"> Visualizar</a>
                             </li>
