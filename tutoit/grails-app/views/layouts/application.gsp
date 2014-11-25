@@ -113,10 +113,6 @@
                                </li>
 
                                <li>
-                                <a href="${createLink(controller: 'playlist', action: 'delete')}"> Excluir Playlist</a>
-                               </li>
-
-                               <li>
                                    <a href="${createLink(controller: 'playlist', action: 'edit')}"> Alterar Playlist</a>
                                </li>
 

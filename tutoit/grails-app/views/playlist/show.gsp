@@ -7,12 +7,6 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-s		<div class="nav" role="navigation">
-			<ul>
-				<li><g:link class="list" action="list"><g:message code="Listar as Playlist"  /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="Nova Playlist" /></g:link></li>
-			</ul>
-		</div>
 		<div id="show-playlist" class="content scaffold-show" role="main">
 			<h1><g:message code="Playlist"  /></h1>
 			<g:if test="${flash.message}">
