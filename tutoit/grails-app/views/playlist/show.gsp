@@ -34,15 +34,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${playlistInstance?.playlistDate}">
-				<li class="fieldcontain">
-					<span id="playlistDate-label" class="property-label"><g:message code="playlist.playlistDate.label" default="Data: " /></span>
-					
-						<span class="property-value" aria-labelledby="playlistDate-label"><g:formatDate date="${playlistInstance?.playlistDate}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${playlistInstance?.user}">
 				<li class="fieldcontain">
 					<span id="user-label" class="property-label"><g:message code="playlist.user.label" default="Usuário: " /></span>

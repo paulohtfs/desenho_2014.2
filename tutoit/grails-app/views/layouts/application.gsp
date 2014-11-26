@@ -96,34 +96,35 @@
                                 <a href="${createLink(controller: 'video', action: 'create')}"> Adicionar</a>
                             </li>
 
-                            <li>
-                                <a href="javascript:;" data-toggle="collapse" data-target="#playlist">
-                                    <i class="fa fa-fw fa-play-circle"></i> Playlist <i class="fa fa-fw fa-caret-down"></i>
-                                </a>
-                            </li>
-
-                            <ul id="playlist" class="collapse">
-                            <li class="page-scroll">
-
-                                <a href="${createLink(controller: 'playlist', action: 'list')}"> PlayLists</a>
-                            </li>
-
-                               <li>
-                                <a href="${createLink(controller: 'playlist', action: 'create')}"> Criar Playlist</a>
-                               </li>
-
-                               <li>
-                                   <a href="${createLink(controller: 'playlist', action: 'edit')}"> Alterar Playlist</a>
-                               </li>
-
-                           </ul>
-
                         </ul>
                     </li>
 
 
+                    <!-- Playlist -->
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#playlist">
+                            <i class="fa fa-fw fa-play-circle"></i> Playlist <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+
+                            <ul id="playlist" class="collapse">
+                                <li class="page-scroll">
+
+                                    <a href="${createLink(controller: 'playlist', action: 'list')}"> PlayLists</a>
+                                </li>
+
+                                <li>
+                                    <a href="${createLink(controller: 'playlist', action: 'create')}"> Criar Playlist</a>
+                                </li>
+
+                                <li>
+                                    <a href="${createLink(controller: 'playlist', action: 'edit')}"> Editar Playlist</a>
+                                </li>
+
+                            </ul>
+                       </li>
 
 
+                <!-- Categorias -->
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#categories">
@@ -142,6 +143,8 @@
                         </ul>
                     </li>
 
+
+                <!-- Market -->
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#market">
                             <i class="fa fa-fw fa-gift"></i> Mercado <i class="fa fa-fw fa-caret-down"></i>

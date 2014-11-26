@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		<div class="nav" role="navigation">
+            +
 		</div>
 		<div id="edit-playlist" class="content scaffold-edit" role="main">
 			<h1><g:message code="Editar Playlist" /></h1>
