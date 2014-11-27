@@ -24,7 +24,12 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #fff;
+    background-color: #008B8B;
+
+}
+
+.main-controllers {
+    color: #fff;
 }
 
 .huge {

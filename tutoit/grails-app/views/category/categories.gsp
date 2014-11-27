@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'beleza.jpg')}" alt="">
                 </a>
             </div>
         </div>
@@ -48,17 +48,17 @@
         <div class="row">
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'fitness.jpg')}" alt="">
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'saude-e-bem-estar.jpg')}" alt="">
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'marketing.jpg')}" alt="">
                 </a>
             </div>
         </div>
@@ -68,17 +68,17 @@
         <div class="row">
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'serviços-Gerais.jpg')}" alt="">
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'fotografia.jpg')}" alt="">
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'TI.jpg')}" alt="">
+                    <img class="img-responsive" src="${resource(dir: 'images/categories', file: 'idiomas.png')}" alt="">
                 </a>
             </div>
         </div>
