@@ -10,6 +10,19 @@
 
 	<body>
 
+    <http auto-config="true">
+        <intercept-url pattern="/admin*" access="ROLE_ADMIN" />
+        <logout logout-success-url="/admin" />
+    </http>
+
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="adm" password="adm" authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+
     <div id="create-user" class="content scaffold-create" role="main">
 
         <g:if test="${flash.message}">

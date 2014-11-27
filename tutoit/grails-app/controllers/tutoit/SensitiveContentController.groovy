@@ -8,4 +8,6 @@ class SensitiveContentController {
     def index() {
     	render "Some sensitive content"
     }
+
+
 }
