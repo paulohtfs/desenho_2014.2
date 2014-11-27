@@ -19,23 +19,15 @@
 					<tr>
 					
 						<g:sortableColumn property="playlistName" title="${message(code: 'playlist.playlistName.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="playlistDate" title="${message(code: 'playlist.playlistDate.label', default: 'Data')}" />
-					
-						<th><g:message code="playlist.user.label" default="Usuário " /></th>
-					
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${playlistInstanceList}" status="i" var="playlistInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${playlistInstance.id}">${fieldValue(bean: playlistInstance, field: "playlistName")}</g:link></td>
-					
-						<td><g:formatDate date="${playlistInstance.playlistDate}" /></td>
-					
-						<td>${fieldValue(bean: playlistInstance, field: "user")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

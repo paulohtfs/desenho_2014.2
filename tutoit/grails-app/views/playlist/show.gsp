@@ -7,12 +7,6 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-s		<div class="nav" role="navigation">
-			<ul>
-				<li><g:link class="list" action="list"><g:message code="Listar as Playlist"  /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="Nova Playlist" /></g:link></li>
-			</ul>
-		</div>
 		<div id="show-playlist" class="content scaffold-show" role="main">
 			<h1><g:message code="Playlist"  /></h1>
 			<g:if test="${flash.message}">
@@ -36,15 +30,6 @@ s		<div class="nav" role="navigation">
 						<g:each in="${playlistInstance.videos}" var="v">
 						<span class="property-value" aria-labelledby="videos-label"><g:link controller="video" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${playlistInstance?.playlistDate}">
-				<li class="fieldcontain">
-					<span id="playlistDate-label" class="property-label"><g:message code="playlist.playlistDate.label" default="Data: " /></span>
-					
-						<span class="property-value" aria-labelledby="playlistDate-label"><g:formatDate date="${playlistInstance?.playlistDate}" /></span>
 					
 				</li>
 				</g:if>

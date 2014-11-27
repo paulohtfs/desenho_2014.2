@@ -27,14 +27,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: playlistInstance, field: 'playlistDate', 'error')} required">
-	<label for="playlistDate">
-		<g:message code="playlist.playlistDate.label" default="Data" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="playlistDate" precision="day"  value="${playlistInstance?.playlistDate}"  />
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: playlistInstance, field: 'user', 'error')} required">
 	<label for="user">
 		<g:message code="playlist.user.label" default="Usuário" />

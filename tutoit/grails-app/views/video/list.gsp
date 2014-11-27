@@ -7,7 +7,7 @@
 	</head>
     <body>
     <g:each in="${currentUser.videos}" var="a">
-        <span class="property-value" aria-labelledby="authors-label"><g:link controller="author" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+        <span class="property-value" aria-labelledby="authors-label"><g:link controller="video" action="edit" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
     </g:each>
 	</body>
 </html>
