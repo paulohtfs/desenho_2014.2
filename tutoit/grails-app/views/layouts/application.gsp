@@ -89,11 +89,15 @@
                         </a>
                         <ul id="meusvideos" class="collapse">
                             <li>
-                                <a href="${createLink(controller: 'video', action: 'list')}"> Visualizar</a>
+                                <a href="${createLink(controller: 'video', action: 'show')}"> Visualizar</a>
                             </li>
 
                             <li class="page-scroll">
                                 <a href="${createLink(controller: 'video', action: 'create')}"> Adicionar</a>
+                            </li>
+
+                            <li class="page-scroll">
+                                <a href="${createLink(controller: 'video', action: 'edit')}"> Editar video</a>
                             </li>
 
                         </ul>
