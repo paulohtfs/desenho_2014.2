@@ -99,4 +99,8 @@ class CategoryController {
             redirect(action: "show", id: id)
         }
     }
+
+    def categories() {
+
+    }
 }

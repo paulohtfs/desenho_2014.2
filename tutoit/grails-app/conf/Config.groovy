@@ -77,23 +77,27 @@ grails.plugins.springsecurity.authority.className = 'tutoit.Login'
 grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
 
 grails.plugins.springsecurity.interceptUrlMap = [
-    '/secure/**':    ['ROLE_ADMIN'],
-    '/category/**':  ['IS_AUTHENTICATED_FULLY'],
-    '/commentary/**':['IS_AUTHENTICATED_FULLY'],
-    '/playlist/**':  ['IS_AUTHENTICATED_FULLY'],
-    '/tag/**':       ['IS_AUTHENTICATED_FULLY'],
-    '/video/**':     ['IS_AUTHENTICATED_FULLY'],
-    '/user/list':    ['IS_AUTHENTICATED_FULLY'],
-    '/user/show':    ['IS_AUTHENTICATED_FULLY'],
-    '/user/perfil':  ['IS_AUTHENTICATED_FULLY'],
-    '/user/edit':    ['IS_AUTHENTICATED_FULLY'],
-    '/user/create':  ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
-    '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
+    '/secure/**':                        ['ROLE_ADMIN'],
+    '/category/create/**':               ['ROLE_ADMIN'],
+    '/category/edit/**':                 ['ROLE_ADMIN'],
+    '/category/categories/**':           ['IS_AUTHENTICATED_FULLY'],
+    '/category/list/**':                 ['IS_AUTHENTICATED_FULLY'],
+    '/category/show/**':                 ['IS_AUTHENTICATED_FULLY'],
+    '/commentary/**':                    ['IS_AUTHENTICATED_FULLY'],
+    '/playlist/**':                      ['IS_AUTHENTICATED_FULLY'],
+    '/tag/**':                           ['IS_AUTHENTICATED_FULLY'],
+    '/video/**':                         ['IS_AUTHENTICATED_FULLY'],
+    '/user/list/**':                     ['IS_AUTHENTICATED_FULLY'],
+    '/user/show/**':                     ['IS_AUTHENTICATED_FULLY'],
+    '/user/perfil/**':                   ['IS_AUTHENTICATED_FULLY'],
+    '/user/edit/**':                     ['IS_AUTHENTICATED_FULLY'],
+    '/user/create/**':                   ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/js/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/css/**':                           ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/images/**':                        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/*':                                ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/login/**':                         ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/logout/**':                        ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
 // log4j configuration
