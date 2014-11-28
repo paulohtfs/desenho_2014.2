@@ -19,7 +19,7 @@
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-user"></i>
-                    <a href="${createLink(controller: 'user', action: 'show')}">
+                    <a class="pageHeader" href="${createLink(controller: 'user', action: 'show')}">
                     Perfil
                     </a>
                 </li>

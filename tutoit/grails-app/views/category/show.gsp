@@ -13,7 +13,7 @@
                 <ol class="breadcrumb">
                     <li>
                         <h4>
-                             <a href="${createLink(controller: 'category', action: 'categories')}">Categorias </a>
+                             <a class="pageHeader" href="${createLink(controller: 'category', action: 'categories')}">Categorias </a>
                          </h4>
                     </li>
 
@@ -83,13 +83,16 @@
 				</g:if>
 			
 			</ol>
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${categoryInstance?.id}" />
-					<g:link class="edit" action="edit" id="${categoryInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
+
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+                <g:form>
+                    <fieldset class="buttons">
+                        <g:hiddenField name="id" value="${categoryInstance?.id}" />
+                        <g:link class="edit" action="edit" id="${categoryInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                        <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                    </fieldset>
+                </g:form>
+            </sec:ifAllGranted>
 		</div>
 	</body>
 </html>

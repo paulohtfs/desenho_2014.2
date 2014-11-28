@@ -6,13 +6,6 @@
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="Listar Categorias" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="Nova Categoria" /></g:link></li>
-			</ul>
-		</div>
 		<div id="edit-category" class="content scaffold-edit" role="main">
 			<h1><g:message code="Editar Categoria" /></h1>
 			<g:if test="${flash.message}">
@@ -25,7 +18,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form method="post" >
+			<g:form method="post"  class="form-horizontal">
 				<g:hiddenField name="id" value="${categoryInstance?.id}" />
 				<g:hiddenField name="version" value="${categoryInstance?.version}" />
 				<fieldset class="form">
