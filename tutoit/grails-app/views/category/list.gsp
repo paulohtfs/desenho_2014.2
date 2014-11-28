@@ -16,8 +16,9 @@
 		<div id="list-category" class="content scaffold-list" role="main">
 			<h1><g:message code="Lista de Categorias" /></h1>
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			    <div class="message" role="status">${flash.message}</div>
 			</g:if>
+
 			<table>
 				<thead>
 					<tr>
@@ -30,19 +31,21 @@
 					
 					</tr>
 				</thead>
+
 				<tbody>
-				<g:each in="${categoryInstanceList}" status="i" var="categoryInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${categoryInstance.id}">${fieldValue(bean: categoryInstance, field: "categoryName")}</g:link></td>
-					
-						<td>${fieldValue(bean: categoryInstance, field: "categoryDescription")}</td>
-					
-						<td><g:formatBoolean boolean="${categoryInstance.eSubcategoria}" /></td>
-					
-					</tr>
-				</g:each>
+                    <g:each in="${categoryInstanceList}" status="i" var="categoryInstance">
+                        <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+
+                            <td><g:link action="show" id="${categoryInstance.id}">${fieldValue(bean: categoryInstance, field: "categoryName")}</g:link></td>
+
+                            <td>${fieldValue(bean: categoryInstance, field: "categoryDescription")}</td>
+
+                            <td><g:formatBoolean boolean="${categoryInstance.eSubcategoria}" /></td>
+
+                        </tr>
+                    </g:each>
 				</tbody>
+
 			</table>
 			<div class="pagination">
 				<g:paginate total="${categoryInstanceTotal}" />

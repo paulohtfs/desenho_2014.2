@@ -22,10 +22,11 @@ body {
 }
 
 #page-wrapper {
-    width: 100%;
+    width: auto;
+    height: 576px;
+    margin: 0 auto;
     padding: 0;
     background-color: #008B8B;
-
 }
 
 .main-controllers {

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="tutoit.Category" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="main">Tuto It</a>
+                <a class="navbar-brand" href="${createLink(uri: '/')}">Tuto It</a>
             </div>
 
             <ul class="nav navbar-right top-nav">
@@ -134,19 +135,21 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#categories">
                             <i class="fa fa-fw fa-stack-exchange"></i> Categorias <i class="fa fa-fw fa-caret-down"></i>
                         </a>
+
                         <ul id="categories" class="collapse">
 
                             <li>
-                                <a href="/tutoit/category/list"> Todas</a>
+                                <a href="${createLink(controller: 'category', action: 'categories')}">Todas</a>
                             </li>
 
-                            <li>
-                                <a href=""> Tecnologia</a>
-                            </li>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+                                <li>
+                                    <a href="${createLink(controller: 'category', action: 'create')}">Adicionar Categoria</a>
+                                </li>
+                            </sec:ifAllGranted>
 
                         </ul>
                     </li>
-
 
                 <!-- Market -->
                     <li>
