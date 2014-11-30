@@ -89,9 +89,9 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#meusvideos">
                             <i class="fa fa-fw fa-play-circle"></i> Meus Vídeos <i class="fa fa-fw fa-caret-down"></i>
                         </a>               <ul id="meusvideos" class="collapse">
-                            <li>
-                                <a href="${createLink(controller: 'video', action: 'listUserVideos')}"> Visualizar</a>
-                            </li>
+                                <li>
+                                    <a href="${createLink(controller: 'video', action: 'listUserVideos')}"> Visualizar</a>
+                                </li>
 
                             <li class="page-scroll">
                                 <a href="${createLink(controller: 'video', action: 'create')}"> Adicionar</a>
