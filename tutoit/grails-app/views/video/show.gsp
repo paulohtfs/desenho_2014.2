@@ -1,5 +1,3 @@
-
-<%@ page import="tutoit.Video" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,5 +5,6 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
+    <h1></h1>
 	</body>
 </html>
