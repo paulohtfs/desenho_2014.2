@@ -40,11 +40,5 @@
 	<g:select id="category" name="category.id" from="${tutoit.Category.list()}" optionKey="id" required="" value="${videoInstance?.category?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: videoInstance, field: 'user', 'error')} required">
-	<label for="user">
-		<g:message code="video.user.label" default="Usuário" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="user" name="user.id" from="${tutoit.User.list()}" optionKey="id" required="" value="${videoInstance?.user?.id}" class="many-to-one"/>
-</div>
+<g:hiddenField name="user.id" value="${currentUser.id}"/>
 

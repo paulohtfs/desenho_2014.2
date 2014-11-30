@@ -44,7 +44,8 @@ class VideoController {
     }
 
     def create() {
-        [videoInstance: new Video(params)]
+        def currentUser = springSecurityService.currentUser
+        [videoInstance: new Video(params), currentUser: currentUser]
     }
 
     // Showing the video
