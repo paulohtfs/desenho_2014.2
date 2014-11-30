@@ -1,27 +1,15 @@
-package tutoit.video
+package tutoit
 
 import org.springframework.dao.DataIntegrityViolationException
-import tutoit.Video
 
 class VideoController {
 
-    ShowingVideo showingVideo
 
     def springSecurityService
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [save: "POST", update: "POST", delete: "POST", show: "GET"]
 
     def index() {
         redirect(action: "show", params: params)
-    }
-
-    // Using Show Strategy [Pending]
-    def list() {
-        def currentUser = springSecurityService.currentUser
-        [currentUser: currentUser]
-    }
-
-    def create() {
-        [videoInstance: new Video(params)]
     }
 
     def save() {
@@ -35,26 +23,41 @@ class VideoController {
         redirect(action: "show", id: videoInstance.id)
     }
 
-    // Using Show Strategy
-    def show(Long videoId, int showStrategy) {
+    def list() {
+        def currentUser = springSecurityService.currentUser
+        [currentUser: currentUser]
+    }
 
-        def videoInstance = Video.get(videoId)
-        if (!videoInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), videoId])
-            redirect(action: "list")
-            return
+    // Using strategy in show video
+    def listUserVideos() {
+        def currentUser = springSecurityService.currentUser
+        def showingVideo = new ShowingVideo()
+        def jsLinks = []
+        def usersVideosID = currentUser.videos
+
+        for (video in usersVideosID) {
+            def videoLink = showingVideo.showVideo(video.id,ShowingVideo.ON_JS)
+            jsLinks.add(videoLink)
         }
 
-        showingVideo.showVideo(videoId, showStrategy)
+        [jsLinks: jsLinks]
+    }
 
-        [videoInstance: videoInstance]
+    def create() {
+        [videoInstance: new Video(params)]
+    }
+
+    // Showing the video
+    def show(Long videoId) {
+
+        [video: videoId]
     }
 
     def edit(Long id) {
         def videoInstance = Video.get(id)
         if (!videoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), id])
-            redirect(action: "list")
+            redirect(action: "listUserVideos")
             return
         }
 
@@ -65,7 +68,7 @@ class VideoController {
         def videoInstance = Video.get(id)
         if (!videoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), id])
-            redirect(action: "list")
+            redirect(action: "listUserVideos")
             return
         }
 
@@ -94,14 +97,14 @@ class VideoController {
         def videoInstance = Video.get(id)
         if (!videoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), id])
-            redirect(action: "list")
+            redirect(action: "listUserVideos")
             return
         }
 
         try {
             videoInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'video.label', default: 'Video'), id])
-            redirect(action: "list")
+            redirect(action: "listUserVideos")
         }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'video.label', default: 'Video'), id])
