@@ -5,40 +5,60 @@
 </head>
 
 <body>
+
+
 <div class="row">
     <div class="col-lg-12">
         <h3 class="page-header">
             Meus Vídeos
         </h3>
-        <ul class="list-group">
-            <g:each in="${jsLinks}" var="video">
-                <li class="list-group-item">
-                    <a class="btn btn-info" href="#${video[2]}" role="button" data-toggle="modal">
+
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-youtube-play"></i>
+                <a class="pageHeader" href="${createLink(controller: 'video', action: 'listUserVideos')}">
+                    Meus Videos
+                </a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <g:each in="${jsLinks}" var="video">
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <a class="alert-link" href="#${video[2]}" role="button" data-toggle="modal">
+                    <img src="${video[3]}">
+                </a>
+                <div class="caption">
+                    <h5>
                         ${video[0]}
-                    </a>
-                    <span class="badge">
-                        <i class="fa fa-fw fa-heart"></i>
-                    </span>
-                </li>
+                    </h5>
+                    <g:submitButton
+                            name="Página"
+                            class="btn btn-danger"/>
+                </div>
+            </div>
+        </div>
 
-                <div id="${video[2]}" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            </div>
 
-                            <div class="modal-body">
-                                <iframe width="480" height="320" src="${video[1]}" frameborder="0" allowfullscreen></iframe>
-                            </div>
+        <div id="${video[2]}" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
 
-                            <div class="modal-footer">
-                            </div>
-                        </div>
+                    <div class="modal-body">
+                        <iframe width="480" height="320" src="${video[1]}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modal-footer">
                     </div>
                 </div>
-            </g:each>
-        </ul>
-    </div>
+            </div>
+        </div>
+    </g:each>
 </div>
 
 
