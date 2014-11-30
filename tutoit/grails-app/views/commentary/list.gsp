@@ -33,13 +33,9 @@
 				<tbody>
 				<g:each in="${commentaryInstanceList}" status="i" var="commentaryInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
 						<td><g:link action="show" id="${commentaryInstance.id}">${fieldValue(bean: commentaryInstance, field: "commentaryDescription")}</g:link></td>
-					
 						<td><g:formatDate date="${commentaryInstance.commentaryDate}" /></td>
-					
 						<td>${fieldValue(bean: commentaryInstance, field: "video")}</td>
-					
 					</tr>
 				</g:each>
 				</tbody>
