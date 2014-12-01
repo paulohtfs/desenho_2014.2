@@ -48,7 +48,7 @@
                     <h5>
                         ${video[0]}
                     </h5>
-                    <g:link action="show" id="${video[2].minus("showVideo")}" class="btn btn-danger">
+                    <g:link controller="video" action="show" id="${video[2].minus("showVideo")}" class="btn btn-danger">
                         Página
                     </g:link>
 

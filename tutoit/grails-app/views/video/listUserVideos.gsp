@@ -35,9 +35,10 @@
                     <h5>
                         ${video[0]}
                     </h5>
-                    <g:submitButton
-                            name="Página"
-                            class="btn btn-danger"/>
+                    <g:link action="show" id="${video[2].minus("showVideo")}" class="btn btn-danger">
+                        Página
+                    </g:link>
+
                 </div>
             </div>
         </div>
