@@ -96,11 +96,6 @@
                             <li class="page-scroll">
                                 <a href="${createLink(controller: 'video', action: 'create')}"> Adicionar</a>
                             </li>
-
-                            <li class="page-scroll">
-                                <a href="${createLink(controller: 'video', action: 'edit')}"> Editar video</a>
-                            </li>
-
                         </ul>
                     </li>
 
