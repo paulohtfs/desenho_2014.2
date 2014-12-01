@@ -7,14 +7,14 @@ class ShowingVideo {
     public static ON_JS = 1
     public static ON_PAGE = 2
 
-    def showVideo(videoId, strategy){
+    def showVideo(Long videoId,int strategy){
 
         this.showable = showingType(strategy)
         def result = showable.showVideoOn(videoId)
         return result
     }
 
-    private Showable showingType(strategy) {
+    private Showable showingType(int strategy) {
 
         Showable showStrategy
 

@@ -2,11 +2,11 @@ package tutoit
 
 class ShowVideoOnJS implements Showable{
 
-    private static String YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/"
-    private static String SHOWING_DIV = "showVideo"
+    private String YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/"
+    private String SHOWING_DIV = "showVideo"
 
-    private static String YOUTUBE_THUMBNAIL_LINK = "https://img.youtube.com/vi/"
-    private static String THUMBNAIL_MEDIUM= "/mqdefault.jpg"
+    private String YOUTUBE_THUMBNAIL_LINK = "https://img.youtube.com/vi/"
+    private String THUMBNAIL_MEDIUM= "/mqdefault.jpg"
 
     @Override
     def showVideoOn(Long videoId) {
