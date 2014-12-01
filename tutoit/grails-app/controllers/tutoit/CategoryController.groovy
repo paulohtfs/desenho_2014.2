@@ -33,13 +33,16 @@ class CategoryController {
 
     def show(Long id) {
         def categoryInstance = Category.get(id)
-        if (!categoryInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'category.label', default: 'Category'), id])
-            redirect(action: "list")
-            return
+        def showingVideo = new ShowingVideo()
+        def jsLinks = []
+        def categoryVideosID = categoryInstance.videos
+
+        for (video in categoryVideosID) {
+            def videoLink = showingVideo.showVideo(video.id,ShowingVideo.ON_JS)
+            jsLinks.add(videoLink)
         }
 
-        [categoryInstance: categoryInstance]
+        [jsLinks: jsLinks, categoryInstance: categoryInstance]
     }
 
     def edit(Long id) {
