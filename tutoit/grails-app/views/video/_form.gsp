@@ -40,5 +40,3 @@
 	<g:select id="category" name="category.id" from="${tutoit.Category.list()}" optionKey="id" required="" value="${videoInstance?.category?.id}" class="many-to-one"/>
 </div>
 
-<g:hiddenField name="user.id" value="${currentUser.id}"/>
-

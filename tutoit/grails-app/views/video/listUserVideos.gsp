@@ -39,7 +39,7 @@
                         Página
                     </g:link>
 
-                    <g:link action="edit" id="${video[2].minus("showVideo")}" class="btn btn-info">
+                    <g:link class="btn btn-info" action="edit" id="${video[2].minus("showVideo")}">
                         Editar
                     </g:link>
 
