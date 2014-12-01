@@ -49,9 +49,11 @@ class VideoController {
     }
 
     // Showing the video
-    def show(Long videoId) {
+    def show(Long id) {
+        def showingVideo = new ShowingVideo()
+        def videoInfo = showingVideo.showVideo(id,ShowingVideo.ON_PAGE)
 
-        [video: videoId]
+        [video: videoInfo]
     }
 
     def edit(Long id) {
