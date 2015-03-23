@@ -19,7 +19,7 @@ class ShowVideoOnPage implements Showable{
         return videoInfo
     }
 
-    private extractVideoID(String videoLink) {
+    private extractVideoID(String videoLink, String video) {
         String urlElement = videoLink.takeWhile {it != '='}
         String extractionResult = videoLink.minus(urlElement)
 

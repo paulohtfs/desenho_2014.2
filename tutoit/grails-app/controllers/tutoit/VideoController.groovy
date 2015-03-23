@@ -13,7 +13,7 @@ class VideoController {
     }
 
     def save() {
-        def videoInstance = new Video(params)
+        new Video(params)
         if (!videoInstance.save(flush: true)) {
             render(view: "create", model: [videoInstance: videoInstance])
             return
