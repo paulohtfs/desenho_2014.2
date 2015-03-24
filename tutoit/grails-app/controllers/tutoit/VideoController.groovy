@@ -25,6 +25,7 @@ class VideoController {
 
     def list() {
         def currentUser = springSecurityService.currentUser
+        def videoId = Video.get(id)
         [currentUser: currentUser]
     }
 
@@ -69,6 +70,7 @@ class VideoController {
 
     def update(Long id, Long version) {
         def videoInstance = Video.get(id)
+        def userInstance = User.get(id)
         if (!videoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'video.label', default: 'Video'), id])
             redirect(action: "listUserVideos")
