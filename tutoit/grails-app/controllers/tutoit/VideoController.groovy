@@ -37,7 +37,8 @@ class VideoController {
         def usersVideosID = currentUser.videos
 
         for (video in usersVideosID) {
-            def videoLink = showingVideo.showVideo(video.id,ShowingVideo.ON_JS)
+            def videoObject = showingVideo
+			def videoLink = videoObject.showVideo(video.id,videoObject.ON_JS)
             usersVideosID.add(video)
         }
 
