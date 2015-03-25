@@ -9,9 +9,15 @@ class ShowVideoOnPage implements Showable{
 
         def videoInfo = []
         def videoInstance = Video.get(videoId)
-        def videoLinkID = extractVideoID(videoInstance.videoLink)
+        
 
-        String embedLink = YOUTUBE_EMBED_LINK + videoLinkID
+		String urlElement = videoLink.takeWhile {it != '='}
+		String extractionResult = videoLink.minus(urlElement)
+		extractionResult =extractionResult.takeWhile {it != '&'}
+		
+		def videoLinkID = extractionResult
+		
+        String embedLink = "https://www.youtube.com/embed" + videoLinkID
 
         videoInfo.add(videoInstance.videoName)
         videoInfo.add(embedLink)
@@ -24,7 +30,9 @@ class ShowVideoOnPage implements Showable{
         String extractionResult = videoLink.minus(urlElement)
 
         extractionResult = extractionResult.takeWhile {it != '&'}
+		
+		extractionResultFinal = "https://www.youtube.com/embed" + extractionResult.minus("=")
 
-        return extractionResult.minus("=")
+        return extractionResultFinal
     }
 }
