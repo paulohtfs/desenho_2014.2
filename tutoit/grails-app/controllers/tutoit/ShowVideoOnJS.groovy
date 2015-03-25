@@ -32,7 +32,7 @@ class ShowVideoOnJS implements Showable{
         String extractionResult = videoLink.minus(urlElement)
 
         extractionResult = extractionResult.takeWhile {it != '&'}
-
+        extractionResult = extractVideoID(videoLink)
         return extractionResult.minus("=")
     }
 }
